@@ -19,13 +19,25 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              "src/usamicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/bower_components/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/bower_components/font-awesome/css/font-awesome.min.css",
+              "src/assets/bower_components/Ionicons/css/ionicons.min.css",
+              "src/assets/css/AdminLTE.min.css",
+              "src/assets/css/skins/_all-skins.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/bower_components/jquery/dist/jquery.min.js",
+              "src/assets/bower_components/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js",
+              "src/assets/bower_components/fastclick/lib/fastclick.js",
+              "src/assets/js/adminlte.min.js",
+              "src/assets/js/demo.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -76,7 +88,7 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
+              "src/usamicon.ico",
               "src/assets"
             ]
           }
