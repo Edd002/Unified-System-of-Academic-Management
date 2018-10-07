@@ -6,24 +6,34 @@ import { RouterModule, Router } from '@angular/router';
 import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { LeftSideMenuComponent } from './left-side-menu/left-side-menu.component';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
-import { RightSideMenuComponent } from './right-side-menu/right-side-menu.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './shared/login/login.component';
+import { RegisterComponent } from './shared/register/register.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderAlunoComponent } from './aluno/header-aluno/header-aluno.component';
+import { HomeAlunoComponent } from './aluno/home-aluno/home-aluno.component';
+import { MenuAlunoComponent } from './aluno/menu-aluno/menu-aluno.component';
+import { HeaderInstituicaoComponent } from './instituicao/header-instituicao/header-instituicao.component';
+import { HomeInstituicaoComponent } from './instituicao/home-instituicao/home-instituicao.component';
+import { MenuInstituicaoComponent } from './instituicao/menu-instituicao/menu-instituicao.component';
+import { HeaderProfessorComponent } from './professor/header-professor/header-professor.component';
+import { HomeProfessorComponent } from './professor/home-professor/home-professor.component';
+import { MenuProfessorComponent } from './professor/menu-professor/menu-professor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    LeftSideMenuComponent,
-    HomeComponent,
-    FooterComponent,
-    RightSideMenuComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    FooterComponent,
+    HeaderAlunoComponent,
+    HomeAlunoComponent,
+    MenuAlunoComponent,
+    HeaderInstituicaoComponent,
+    HomeInstituicaoComponent,
+    MenuInstituicaoComponent,
+    HeaderProfessorComponent,
+    HomeProfessorComponent,
+    MenuProfessorComponent
   ],
   imports: [
     BrowserModule,
