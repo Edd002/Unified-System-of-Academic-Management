@@ -1,6 +1,8 @@
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Unified System of Academic Management</b></a>
+    <a href="#">
+      <b>Unified System of Academic Management</b>
+    </a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -8,11 +10,11 @@
 
     <form action="#" method="post">
       <div class="form-group has-feedback">
-        <input #usuario type="text" class="form-control" placeholder="Usuário">
+        <input autofocus #usuario type="text" id="txt-usuario" class="form-control" placeholder="Usuário">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input #senha type="password" class="form-control" placeholder="Password">
+        <input #senha type="password" id="txt-senha" class="form-control" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -25,15 +27,20 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <!-- CONTINUAR AQUI - CORRIGIR: A ROTA ESTÁ SENDO CHAMADA ANTES DA EXECUÇÃO DA FUNÇÃO -->
-
-          <button [routerLink]="rotaLogin" (click)="logar(usuario.value, senha.value)" type="button" class="btn btn-primary btn-block btn-flat">Entrar</button>
+          <button (click)="logar(usuario.value, senha.value)" type="button" id="btn-logar" class="btn btn-primary btn-block btn-flat"
+            data-toggle="modal" data-target="#myModal">Entrar</button>
         </div>
         <!-- /.col -->
       </div>
     </form>
 
-    <a href="#">Esqueceu a senha?</a><br>
+    <div *ngIf="loginErro; then thenBlock"></div>
+    <ng-template #thenBlock>
+      <!-- Modal de Erro -->
+    </ng-template>
+
+    <a href="#">Esqueceu a senha?</a>
+    <br>
     <a [routerLink]="['/register']" class="text-center">Primeiro acesso?</a>
 
   </div>

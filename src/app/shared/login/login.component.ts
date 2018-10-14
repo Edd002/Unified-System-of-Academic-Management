@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'usam-login',
@@ -7,35 +8,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
+    onEnterKey();
   }
 
-  rotaLogin: string = "/register";
-  validadorLogin: boolean;
+  rotaLogin: string;
+  loginErro: boolean;
 
   logar(usuario: string, senha: string): void {
-    console.log("Usuário: " + usuario);
-    console.log("Senha: " + senha);
-
     if (usuario == "aluno" && senha == "aluno") {
-      console.log("Antes: " + this.rotaLogin);
-
       this.rotaLogin = "/aluno";
-      this.validadorLogin = true;
-
-      console.log("Depois: " + this.rotaLogin);
-
+      this.loginErro = false;
     } else if (usuario == "instituicao" && senha == "instituicao") {
       this.rotaLogin = "/instituicao";
-      this.validadorLogin = true;
+      this.loginErro = false;
     } else if (usuario == "professor" && senha == "professor") {
       this.rotaLogin = "/professor";
-      this.validadorLogin = true;
+      this.loginErro = false;
     } else {
       this.rotaLogin = "/login";
-      this.validadorLogin = false;
+      this.loginErro = true;
+      alert("Usuário ou senha inválidos.");
     }
+
+    this.router.navigate([this.rotaLogin]);
   }
 }
+
+
+// -- Javascript- -
+function onEnterKey() {
+  var inputUsuario = document.getElementById("txt-usuario");
+  var inputSenha = document.getElementById("txt-senha");
+
+  inputUsuario.addEventListener("keyup", function (event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      document.getElementById("btn-logar").click();
+    }
+  });
+
+  inputSenha.addEventListener("keyup", function (event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      document.getElementById("btn-logar").click();
+    }
+  });
+}
+

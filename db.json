@@ -1,0 +1,100 @@
+{
+  "alunos": [
+    {
+      "codigo": 1,
+      "ra": "11111",
+      "nome": "Alexander Pierce",
+      "curso": "Curso1",
+      "turno": "Turno1",
+      "turma": "Turma1"
+    },
+    {
+      "codigo": 2,
+      "ra": "22222",
+      "nome": "Breno Petruquio",
+      "curso": "Curso2",
+      "turno": "Turno2",
+      "turma": "Turma2"
+    },
+    {
+      "codigo": 3,
+      "ra": "33333",
+      "nome": "Elizabeth Pierce",
+      "curso": "Curso3",
+      "turno": "Turno3",
+      "turma": "Turma3"
+    },
+    {
+      "codigo": 4,
+      "ra": "44444",
+      "nome": "Marie Claire",
+      "curso": "Curso4",
+      "turno": "Turno4",
+      "turma": "Turma4"
+    },
+    {
+      "codigo": 5,
+      "ra": "55555",
+      "nome": "Monique Silva",
+      "curso": "Curso5",
+      "turno": "Turno5",
+      "turma": "Turma5"
+    },
+    {
+      "codigo": 6,
+      "ra": "66666",
+      "nome": "Ernest Bob",
+      "curso": "Curso6",
+      "turno": "Turno6",
+      "turma": "Turma6"
+    },
+    {
+      "codigo": 7,
+      "ra": "77777",
+      "nome": "Raquel Reis",
+      "curso": "Curso7",
+      "turno": "Turno7",
+      "turma": "Turma7"
+    },
+    {
+      "codigo": 8,
+      "ra": "88888",
+      "nome": "Michele Lara",
+      "curso": "Curso8",
+      "turno": "Turno8",
+      "turma": "Turma8"
+    },
+    {
+      "codigo": 9,
+      "ra": "99999",
+      "nome": "Miag Toledo",
+      "curso": "Curso9",
+      "turno": "Turno9",
+      "turma": "Turma9"
+    },
+    {
+      "codigo": 10,
+      "ra": "1010101010",
+      "nome": "Miguel Toledo",
+      "curso": "Curso10",
+      "turno": "Turno10",
+      "turma": "Turma10"
+    },
+    {
+      "codigo": 11,
+      "ra": "1111111111",
+      "nome": "Daniel Moura",
+      "curso": "Curso11",
+      "turno": "Turno11",
+      "turma": "Turma11"
+    },
+    {
+      "codigo": 12,
+      "ra": "1212121212",
+      "nome": "Ricardo Silva",
+      "curso": "Curso12",
+      "turno": "Turno12",
+      "turma": "Turma12"
+    }
+  ]
+}

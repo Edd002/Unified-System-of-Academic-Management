@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
-import { RouterModule, Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { ROUTES } from './app.routes';
 
@@ -24,6 +24,8 @@ import { ProfessorComponent } from './professor/professor.component';
 import { HeaderProfessorComponent } from './professor/header-professor/header-professor.component';
 import { HomeProfessorComponent } from './professor/home-professor/home-professor.component';
 import { MenuProfessorComponent } from './professor/menu-professor/menu-professor.component';
+
+import { AlunoService } from './aluno/aluno.service';
 
 
 @NgModule({
@@ -50,10 +52,12 @@ import { MenuProfessorComponent } from './professor/menu-professor/menu-professo
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [
+    AlunoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
