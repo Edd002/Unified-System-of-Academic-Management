@@ -18,7 +18,7 @@ export class HomeInstituicaoComponent implements OnInit {
       alunos => this.listAlunos = alunos
     );
 
-    alert(this.listAlunos);
+    //alert(this.listAlunos);
   }
 
 }

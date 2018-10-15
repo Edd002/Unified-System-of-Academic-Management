@@ -72,12 +72,12 @@
                 </tr>
               </thead>
               <tbody>
-                <tr role="row" class="odd">
-                  <td>111</td>
-                  <td>Aluno 1</td>
-                  <td>Curso 1</td>
-                  <td>Turno 1</td>
-                  <td>Turma 1</td>
+                <tr role="row" class="odd" *ngFor="let aluno of listAlunos">
+                  <td>{{aluno.ra}}</td>
+                  <td>{{aluno.nome}}</td>
+                  <td>{{aluno.curso}}</td>
+                  <td>{{aluno.turno}}</td>
+                  <td>{{aluno.turma}}</td>
                 </tr>
               </tbody>
               <tfoot>
