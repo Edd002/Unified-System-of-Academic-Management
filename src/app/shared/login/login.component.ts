@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
     } else {
       this.rotaLogin = "/login";
       this.loginErro = true;
-      alert("Usuário ou senha inválidos.");
     }
 
     this.router.navigate([this.rotaLogin]);

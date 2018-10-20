@@ -25,7 +25,10 @@ import { HeaderProfessorComponent } from './professor/header-professor/header-pr
 import { HomeProfessorComponent } from './professor/home-professor/home-professor.component';
 import { MenuProfessorComponent } from './professor/menu-professor/menu-professor.component';
 
+import { InstituicaoService } from './instituicao/instituicao.service';
+import { DisciplinaService } from './shared/disciplina/disciplina.service';
 import { AlunoService } from './aluno/aluno.service';
+import { ProfessorService } from './professor/professor.service';
 
 
 @NgModule({
@@ -56,7 +59,10 @@ import { AlunoService } from './aluno/aluno.service';
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    AlunoService
+    InstituicaoService,
+    DisciplinaService,
+    AlunoService,
+    ProfessorService
   ],
   bootstrap: [AppComponent]
 })

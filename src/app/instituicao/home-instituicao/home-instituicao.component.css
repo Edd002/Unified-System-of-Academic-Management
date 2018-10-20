@@ -1,0 +1,10 @@
+td, th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+td button {
+    display: block !important;
+    margin: auto !important;
+    max-width: 100px !important;
+}

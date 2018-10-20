@@ -9,14 +9,11 @@ import { AlunoService } from './aluno.service';
 })
 export class AlunoComponent implements OnInit {
 
-  listAlunos: Aluno[];
+  aluno: Aluno;
 
   constructor(private alunoService: AlunoService) { }
 
   ngOnInit() {
-    this.alunoService.getAllAlunos().subscribe(
-      list => this.listAlunos = list
-    );
   }
 
 }

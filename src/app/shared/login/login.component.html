@@ -14,7 +14,7 @@
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input #senha type="password" id="txt-senha" class="form-control" placeholder="Password">
+        <input #senha type="password" id="txt-senha" class="form-control" placeholder="Senha">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -37,6 +37,11 @@
     <div *ngIf="loginErro; then thenBlock"></div>
     <ng-template #thenBlock>
       <!-- Modal de Erro -->
+      <div class="form-group has-error">
+        <label class="control-label" for="inputError">
+          <i class="fa fa-times-circle-o"></i> Usuário ou senha inválidos.
+        </label>
+      </div>
     </ng-template>
 
     <a href="#">Esqueceu a senha?</a>

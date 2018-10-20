@@ -9,23 +9,6 @@
   <!-- Default box 1 -->
   <div class="box">
     <div class="box-header with-border">
-      <h3 class="box-title">Turmas</h3>
-
-      <div class="box-tools pull-right">
-        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-          <i class="fa fa-minus"></i>
-        </button>
-      </div>
-    </div>
-    <div class="box-body">
-      TABELA COM TODAS AS TURMAS
-    </div>
-    <!-- /.box-body -->
-  </div>
-
-  <!-- Default box 2 -->
-  <div class="box">
-    <div class="box-header with-border">
       <h3 class="box-title">Disciplinas</h3>
 
       <div class="box-tools pull-right">
@@ -34,8 +17,108 @@
         </button>
       </div>
     </div>
+    <!-- /.box-header -->
     <div class="box-body">
-      TABELA COM TODAS AS DISCIPLINAS
+      <div class="dataTables_wrapper form-inline dt-bootstrap">
+        <div class="row">
+          <div class="col-sm-6"></div>
+          <div class="col-sm-6"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <table class="table table-bordered table-hover dataTable" role="grid">
+              <thead>
+                <tr>
+                  <th rowspan="1" colspan="1">Nome</th>
+                  <th rowspan="1" colspan="1">Turno</th>
+                  <th rowspan="1" colspan="1">Alterar</th>
+                  <th rowspan="1" colspan="1">Remover</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr role="row" class="odd" *ngFor="let disciplina of listDisciplinas">
+                  <td>{{disciplina.nome}}</td>
+                  <td>{{disciplina.turno}}</td>
+                  <td>
+                    <button type="button" class="btn btn-block btn-warning">Alterar</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-block btn-danger">Remover</button>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th rowspan="1" colspan="1">Nome</th>
+                  <th rowspan="1" colspan="1">Turno</th>
+                  <th rowspan="1" colspan="1">Alterar</th>
+                  <th rowspan="1" colspan="1">Remover</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.box-body -->
+  </div>
+
+  <!-- Default box 2 -->
+  <div class="box">
+    <div class="box-header with-border">
+      <h3 class="box-title">Professores</h3>
+
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+          <i class="fa fa-minus"></i>
+        </button>
+      </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+      <div class="dataTables_wrapper form-inline dt-bootstrap">
+        <div class="row">
+          <div class="col-sm-6"></div>
+          <div class="col-sm-6"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <table class="table table-bordered table-hover dataTable" role="grid">
+              <thead>
+                <tr>
+                  <th rowspan="1" colspan="1">Registro Acadêmico</th>
+                  <th rowspan="1" colspan="1">Nome</th>
+                  <th rowspan="1" colspan="1">Turno</th>
+                  <th rowspan="1" colspan="1">Alterar</th>
+                  <th rowspan="1" colspan="1">Remover</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr role="row" class="odd" *ngFor="let professor of listProfessores">
+                  <td>{{professor.ra}}</td>
+                  <td>{{professor.nome}}</td>
+                  <td>{{professor.turno}}</td>
+                  <td>
+                    <button type="button" class="btn btn-block btn-warning">Alterar</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-block btn-danger">Remover</button>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th rowspan="1" colspan="1">Registro Acadêmico</th>
+                  <th rowspan="1" colspan="1">Nome</th>
+                  <th rowspan="1" colspan="1">Turno</th>
+                  <th rowspan="1" colspan="1">Alterar</th>
+                  <th rowspan="1" colspan="1">Remover</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- /.box-body -->
   </div>
@@ -68,7 +151,8 @@
                   <th rowspan="1" colspan="1">Nome</th>
                   <th rowspan="1" colspan="1">Curso</th>
                   <th rowspan="1" colspan="1">Turno</th>
-                  <th rowspan="1" colspan="1">Turma</th>
+                  <th rowspan="1" colspan="1">Alterar</th>
+                  <th rowspan="1" colspan="1">Remover</th>
                 </tr>
               </thead>
               <tbody>
@@ -77,7 +161,12 @@
                   <td>{{aluno.nome}}</td>
                   <td>{{aluno.curso}}</td>
                   <td>{{aluno.turno}}</td>
-                  <td>{{aluno.turma}}</td>
+                  <td>
+                    <button type="button" class="btn btn-block btn-warning">Alterar</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-block btn-danger">Remover</button>
+                  </td>
                 </tr>
               </tbody>
               <tfoot>
@@ -87,6 +176,7 @@
                   <th rowspan="1" colspan="1">Curso</th>
                   <th rowspan="1" colspan="1">Turno</th>
                   <th rowspan="1" colspan="1">Turma</th>
+                  <th rowspan="1" colspan="1">Remover</th>
                 </tr>
               </tfoot>
             </table>
