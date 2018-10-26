@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Instituicao } from 'src/app/instituicao/instituicao.model';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'usam-menu-instituicao',
@@ -11,18 +10,6 @@ export class MenuInstituicaoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  showProfessores() {
-    //loadProfessores();
-  }
-
-  showAlunos() {
-    //loadAlunos();
-  }
-
-  showDisciplinas() {
-    //loadDisciplinas();
   }
 
 }

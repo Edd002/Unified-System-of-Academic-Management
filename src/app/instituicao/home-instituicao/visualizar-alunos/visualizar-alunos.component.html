@@ -1,0 +1,58 @@
+<!-- Default box -->
+<div class="box">
+  <div class="box-header">
+    <h3 class="box-title">Alunos</h3>
+
+    <div class="box-tools pull-right">
+      <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+        <i class="fa fa-minus"></i>
+      </button>
+    </div>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <div class="dataTables_wrapper form-inline dt-bootstrap">
+      <div class="row">
+        <div class="col-sm-6"></div>
+        <div class="col-sm-6"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <table class="table table-bordered table-hover dataTable" role="grid">
+            <thead>
+              <tr>
+                <th rowspan="1" colspan="1">Registro Acadêmico</th>
+                <th rowspan="1" colspan="1">Nome</th>
+                <th rowspan="1" colspan="1">E-mail</th>
+                <th rowspan="1" colspan="1">Usuário</th>
+                <th rowspan="1" colspan="1">Remover</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr role="row" class="odd" *ngFor="let aluno of listAlunos">
+                <td>{{aluno?.ra}}</td>
+                <td>{{aluno?.nome}}</td>
+                <td>{{aluno?.email}}</td>
+                <td>{{aluno?.usuario}}</td>
+                <td>
+                  <button type="button" class="btn btn-block btn-danger">Remover</button>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th rowspan="1" colspan="1">Registro Acadêmico</th>
+                <th rowspan="1" colspan="1">Nome</th>
+                <th rowspan="1" colspan="1">E-mail</th>
+                <th rowspan="1" colspan="1">Usuário</th>
+                <th rowspan="1" colspan="1">Remover</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.box-body -->
+</div>
+<!-- /.box -->

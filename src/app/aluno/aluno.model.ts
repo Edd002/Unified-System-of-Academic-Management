@@ -1,8 +1,8 @@
-export class Aluno {
+export interface Aluno {
     codigo: number;
     ra: string;
     nome: string;
-    curso: string;
-    turno: string;
-    turma: string;
+    email: string;
+    usuario: string;
+    senha: string;
 }

@@ -2,23 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
 import { ROUTES } from './app.routes';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './shared/login/login.component';
 import { RegisterComponent } from './shared/register/register.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
-import { AlunoComponent } from './aluno/aluno.component';
-import { HeaderAlunoComponent } from './aluno/header-aluno/header-aluno.component';
-import { HomeAlunoComponent } from './aluno/home-aluno/home-aluno.component';
-import { MenuAlunoComponent } from './aluno/menu-aluno/menu-aluno.component';
-
 import { InstituicaoComponent } from './instituicao/instituicao.component';
 import { HeaderInstituicaoComponent } from './instituicao/header-instituicao/header-instituicao.component';
 import { HomeInstituicaoComponent } from './instituicao/home-instituicao/home-instituicao.component';
 import { MenuInstituicaoComponent } from './instituicao/menu-instituicao/menu-instituicao.component';
+
+import { AlunoComponent } from './aluno/aluno.component';
+import { HeaderAlunoComponent } from './aluno/header-aluno/header-aluno.component';
+import { HomeAlunoComponent } from './aluno/home-aluno/home-aluno.component';
+import { MenuAlunoComponent } from './aluno/menu-aluno/menu-aluno.component';
 
 import { ProfessorComponent } from './professor/professor.component';
 import { HeaderProfessorComponent } from './professor/header-professor/header-professor.component';
@@ -26,10 +26,28 @@ import { HomeProfessorComponent } from './professor/home-professor/home-professo
 import { MenuProfessorComponent } from './professor/menu-professor/menu-professor.component';
 
 import { InstituicaoService } from './instituicao/instituicao.service';
-import { DisciplinaService } from './shared/disciplina/disciplina.service';
+import { DisciplinaService } from './disciplina/disciplina.service';
 import { AlunoService } from './aluno/aluno.service';
 import { ProfessorService } from './professor/professor.service';
 
+import { AlterarDisciplinaComponent } from './instituicao/home-instituicao/alterar-disciplina/alterar-disciplina.component';
+import { AlterarAlunoComponent } from './instituicao/home-instituicao/alterar-aluno/alterar-aluno.component';
+import { AlterarProfessorComponent } from './instituicao/home-instituicao/alterar-professor/alterar-professor.component';
+import { CadastrarDisciplinaComponent } from './instituicao/home-instituicao/cadastrar-disciplina/cadastrar-disciplina.component';
+import { CadastrarAlunoComponent } from './instituicao/home-instituicao/cadastrar-aluno/cadastrar-aluno.component';
+import { CadastrarProfessorComponent } from './instituicao/home-instituicao/cadastrar-professor/cadastrar-professor.component';
+import { VisualizarDisciplinasComponent } from './instituicao/home-instituicao/visualizar-disciplinas/visualizar-disciplinas.component';
+import { VisualizarAlunosComponent } from './instituicao/home-instituicao/visualizar-alunos/visualizar-alunos.component';
+import { VisualizarProfessoresComponent } from './instituicao/home-instituicao/visualizar-professores/visualizar-professores.component';
+
+import { QuadroAvisosComponent as QuadroAvisosComponentProfessor } from './professor/home-professor/quadro-avisos/quadro-avisos.component';
+import { GerenciamentoFaltasComponent } from './professor/home-professor/gerenciamento-faltas/gerenciamento-faltas.component';
+import { GerenciamentoNotasComponent } from './professor/home-professor/gerenciamento-notas/gerenciamento-notas.component';
+import { CronogramaAcademicoComponent as CronogramaAcademicoComponentProfessor } from './professor/home-professor/cronograma-academico/cronograma-academico.component';
+
+import { QuadroAvisosComponent as QuadroAvisosComponentAluno } from './aluno/home-aluno/quadro-avisos/quadro-avisos.component';
+import { DisciplinasMatriculadasComponent } from './aluno/home-aluno/disciplinas-matriculadas/disciplinas-matriculadas.component';
+import { CronogramaAcademicoComponent as CronogramaAcademicoComponentAluno } from './aluno/home-aluno/cronograma-academico/cronograma-academico.component';
 
 @NgModule({
   declarations: [
@@ -38,24 +56,46 @@ import { ProfessorService } from './professor/professor.service';
     RegisterComponent,
     FooterComponent,
 
-    AlunoComponent,
-    HeaderAlunoComponent,
-    HomeAlunoComponent,
-    MenuAlunoComponent,
-
     InstituicaoComponent,
     HeaderInstituicaoComponent,
     HomeInstituicaoComponent,
     MenuInstituicaoComponent,
 
+    AlunoComponent,
+    HeaderAlunoComponent,
+    HomeAlunoComponent,
+    MenuAlunoComponent,
+
     ProfessorComponent,
     HeaderProfessorComponent,
     HomeProfessorComponent,
-    MenuProfessorComponent
+    MenuProfessorComponent,
+
+    AlterarDisciplinaComponent,
+    AlterarAlunoComponent,
+    AlterarProfessorComponent,
+
+    CadastrarDisciplinaComponent,
+    CadastrarAlunoComponent,
+    CadastrarProfessorComponent,
+
+    VisualizarDisciplinasComponent,
+    VisualizarAlunosComponent,
+    VisualizarProfessoresComponent,
+
+    QuadroAvisosComponentProfessor,
+    GerenciamentoFaltasComponent,
+    GerenciamentoNotasComponent,
+    CronogramaAcademicoComponentProfessor,
+
+    QuadroAvisosComponentAluno,
+    DisciplinasMatriculadasComponent,
+    CronogramaAcademicoComponentAluno
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [

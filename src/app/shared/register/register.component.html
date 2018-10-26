@@ -1,31 +1,48 @@
 <div class="register-box">
   <div class="register-logo">
-    <a href="#"><b>Unified System of Academic Management</b></a>
+    <a role="button">
+      <b>Unified System of Academic Management</b>
+    </a>
   </div>
   <!-- /.register-logo -->
   <div class="register-box-body">
     <p class="login-box-msg">Primeiro acesso no sistema</p>
 
-    <form action="#" method="post">
+    <form [formGroup]="formRegister" (ngSubmit)="submit()">
       <div class="form-group has-feedback">
-        <input autofocus #registroAcademico type="text" id="txt-registro-academico" class="form-control" placeholder="Registro Acadêmico">
+        <input formControlName="registroAcademico" autofocus type="text" id="txt-registro-academico" class="form-control" placeholder="Registro Acadêmico" title="Campo obrigatório">
         <span class="glyphicon glyphicon-book form-control-feedback"></span>
+        <div class="warning" *ngIf="!formRegister.controls.registroAcademico.valid && formRegister.controls.registroAcademico.touched">
+          Registro acadêmico inválido
+        </div>
       </div>
       <div class="form-group has-feedback">
-        <input #usuario type="text" id="txt-usuario" class="form-control" placeholder="Usuário">
+        <input formControlName="usuario" type="text" id="txt-usuario" class="form-control" placeholder="Usuário" title="Campo obrigatório">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <div class="warning" *ngIf="!formRegister.controls.usuario.valid && formRegister.controls.usuario.touched">
+          Usuário inválido
+        </div>
       </div>
       <div class="form-group has-feedback">
-        <input #email type="email" id="txt-email" class="form-control" placeholder="E-mail">
+        <input formControlName="email" type="email" id="txt-email" class="form-control" placeholder="E-mail" title="Campo obrigatório">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <div class="warning" *ngIf="!formRegister.controls.email.valid && formRegister.controls.email.touched">
+          E-mail inválido
+        </div>
       </div>
       <div class="form-group has-feedback">
-        <input #senha type="password" id="txt-senha" class="form-control" placeholder="Senha">
+        <input formControlName="senha" type="password" id="txt-senha" class="form-control" placeholder="Senha" title="Campo obrigatório">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <div class="warning" *ngIf="!formRegister.controls.senha.valid && formRegister.controls.senha.touched">
+          Senha inválida
+        </div>
       </div>
       <div class="form-group has-feedback">
-        <input #confirmarSenha type="password" id="txt-confirmar-senha" class="form-control" placeholder="Confirmar senha">
+        <input formControlName="confirmarSenha" type="password" id="txt-confirmar-senha" class="form-control" placeholder="Confirmar senha" title="Campo obrigatório">
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+        <div class="warning" *ngIf="!formRegister.controls.confirmarSenha.valid && formRegister.controls.confirmarSenha.touched">
+          Confirmar senha inválida
+        </div>
       </div>
       <div class="row">
         <div class="col-xs-8">
@@ -37,7 +54,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button (click)="cadastrar(registroAcademico.value, usuario.value, email.value, senha.value, confirmarSenha.value)" type="button" id="btn-cadastrar" class="btn btn-primary btn-block btn-flat">Cadastrar</button>
+          <button type="submit" id="btn-cadastrar" class="btn btn-primary btn-block btn-flat" [disabled]="!formRegister.valid">Cadastrar</button>
         </div>
         <!-- /.col -->
       </div>

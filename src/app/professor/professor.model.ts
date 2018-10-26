@@ -1,8 +1,8 @@
-export class Professor {
+export interface Professor {
     codigo: number;
     ra: string;
     nome: string;
-    turno: string;
+    email: string;
     usuario: string;
     senha: string;
 }

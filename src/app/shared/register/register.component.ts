@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'usam-register',
@@ -7,58 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  formRegister: FormGroup
+
+  constructor(private formBuilder: FormBuilder) {
+
+    this.formRegister = this.formBuilder.group({
+      registroAcademico: ['', [Validators.required]],
+      usuario: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      senha: ['', [Validators.required, Validators.minLength(6)]],
+      confirmarSenha: ['', [Validators.required, Validators.minLength(6)]]
+    });
+
+  }
 
   ngOnInit() {
-    onEnterKey();
   }
 
-  cadastrar(registroAcademico: string, usuario: string, email: string, senha: string, confirmarSenha: string): void {
-    alert("CADASTROU\nRegistro Acadêmico: " + registroAcademico + "\nUsuário: " + usuario + "\nE-mail: " + email + "\nSenha: " + senha + "\nConfirmar Senha: " + confirmarSenha);
+  /*
+  submit() {
+    let user: User = {
+      "id": null,
+      "name": this.registerForm.controls.name.value,
+      "email": this.registerForm.controls.email.value,
+      "password": this.registerForm.controls.password.value
+    }
+
+    this.authService.registrar(user);
   }
-}
-
-
-// -- Javascript- -
-function onEnterKey() {
-  var inputRegistroAcademico = document.getElementById("txt-registro-academico");
-  var inputUsuario = document.getElementById("txt-usuario");
-  var inputEmail = document.getElementById("txt-email");
-  var inputSenha = document.getElementById("txt-senha");
-  var inputConfirmarSenha = document.getElementById("txt-confirmar-senha");
-
-  inputRegistroAcademico.addEventListener("keyup", function (event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-      document.getElementById("btn-cadastrar").click();
-    }
-  });
-
-  inputUsuario.addEventListener("keyup", function (event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-      document.getElementById("btn-cadastrar").click();
-    }
-  });
-
-  inputEmail.addEventListener("keyup", function (event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-      document.getElementById("btn-cadastrar").click();
-    }
-  });
-
-  inputSenha.addEventListener("keyup", function (event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-      document.getElementById("btn-cadastrar").click();
-    }
-  });
-
-  inputConfirmarSenha.addEventListener("keyup", function (event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-      document.getElementById("btn-cadastrar").click();
-    }
-  });
+  */
 }

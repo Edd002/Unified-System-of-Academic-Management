@@ -10,62 +10,62 @@
     {
       "codigo": 1,
       "nome": "Nome1",
-      "turno": "Turno1"
+      "turnos": "Turnos1"
     },
     {
       "codigo": 2,
       "nome": "Nome2",
-      "turno": "Turno2"
+      "turnos": "Turnos2"
     },
     {
       "codigo": 3,
       "nome": "Nome3",
-      "turno": "Turno3"
+      "turnos": "Turnos3"
     },
     {
       "codigo": 4,
       "nome": "Nome4",
-      "turno": "Turno4"
+      "turnos": "Turnos4"
     },
     {
       "codigo": 5,
       "nome": "Nome5",
-      "turno": "Turno5"
+      "turnos": "Turnos5"
     },
     {
       "codigo": 6,
       "nome": "Nome6",
-      "turno": "Turno6"
+      "turnos": "Turnos6"
     },
     {
       "codigo": 7,
       "nome": "Nome7",
-      "turno": "Turno7"
+      "turnos": "Turnos7"
     },
     {
       "codigo": 8,
       "nome": "Nome8",
-      "turno": "Turno8"
+      "turnos": "Turnos8"
     },
     {
       "codigo": 9,
       "nome": "Nome9",
-      "turno": "Turno9"
+      "turnos": "Turnos9"
     },
     {
       "codigo": 10,
       "nome": "Nome10",
-      "turno": "Turno10"
+      "turnos": "Turnos10"
     },
     {
       "codigo": 11,
       "nome": "Nome11",
-      "turno": "Turno11"
+      "turnos": "Turnos11"
     },
     {
       "codigo": 12,
       "nome": "Nome12",
-      "turno": "Turno12"
+      "turnos": "Turnos12"
     }
   ],
   "professores": [
@@ -73,7 +73,7 @@
       "codigo": 1,
       "ra": "P11111",
       "nome": "Professor1",
-      "turno": "Turno1",
+      "email": "email1",
       "usuario": "professor1",
       "senha": "professor1"
     },
@@ -81,7 +81,7 @@
       "codigo": 2,
       "ra": "P22222",
       "nome": "Professor2",
-      "turno": "Turno2",
+      "email": "email2",
       "usuario": "professor2",
       "senha": "professor2"
     },
@@ -89,7 +89,7 @@
       "codigo": 3,
       "ra": "P33333",
       "nome": "Professor3",
-      "turno": "Turno3",
+      "email": "email3",
       "usuario": "professor3",
       "senha": "professor3"
     },
@@ -97,7 +97,7 @@
       "codigo": 4,
       "ra": "P44444",
       "nome": "Professor4",
-      "turno": "Turno4",
+      "email": "email4",
       "usuario": "professor4",
       "senha": "professor4"
     },
@@ -105,7 +105,7 @@
       "codigo": 5,
       "ra": "P55555",
       "nome": "Professor5",
-      "turno": "Turno5",
+      "email": "email5",
       "usuario": "professor5",
       "senha": "professor5"
     },
@@ -113,7 +113,7 @@
       "codigo": 6,
       "ra": "P66666",
       "nome": "Professor6",
-      "turno": "Turno6",
+      "email": "email6",
       "usuario": "professor6",
       "senha": "professor6"
     },
@@ -121,7 +121,7 @@
       "codigo": 7,
       "ra": "P77777",
       "nome": "Professor7",
-      "turno": "Turno7",
+      "email": "email7",
       "usuario": "professor7",
       "senha": "professor7"
     },
@@ -129,7 +129,7 @@
       "codigo": 8,
       "ra": "P88888",
       "nome": "Professor8",
-      "turno": "Turno8",
+      "email": "email8",
       "usuario": "professor8",
       "senha": "professor8"
     },
@@ -137,7 +137,7 @@
       "codigo": 9,
       "ra": "P99999",
       "nome": "Professor9",
-      "turno": "Turno9",
+      "email": "email9",
       "usuario": "professor9",
       "senha": "professor9"
     },
@@ -145,7 +145,7 @@
       "codigo": 10,
       "ra": "P1010101010",
       "nome": "Professor10",
-      "turno": "Turno10",
+      "email": "email10",
       "usuario": "professor10",
       "senha": "professor10"
     },
@@ -153,7 +153,7 @@
       "codigo": 11,
       "ra": "P1111111111",
       "nome": "Professor11",
-      "turno": "Turno11",
+      "email": "email11",
       "usuario": "professor11",
       "senha": "professor11"
     },
@@ -161,7 +161,7 @@
       "codigo": 12,
       "ra": "P1212121212",
       "nome": "Professor12",
-      "turno": "Turno12",
+      "email": "email12",
       "usuario": "professor12",
       "senha": "professor12"
     }
@@ -171,108 +171,96 @@
       "codigo": 1,
       "ra": "A11111",
       "nome": "Alexander Pierce",
-      "curso": "Curso1",
-      "turno": "Turno1",
-      "login": "aluno1",
+      "email": "email1",
+      "usuario": "aluno1",
       "senha": "aluno1"
     },
     {
       "codigo": 2,
       "ra": "A22222",
       "nome": "Breno Petruquio",
-      "curso": "Curso2",
-      "turno": "Turno2",
-      "login": "aluno2",
+      "email": "email2",
+      "usuario": "aluno2",
       "senha": "aluno2"
     },
     {
       "codigo": 3,
       "ra": "A33333",
       "nome": "Elizabeth Pierce",
-      "curso": "Curso3",
-      "turno": "Turno3",
-      "login": "aluno3",
+      "email": "email2",
+      "usuario": "aluno3",
       "senha": "aluno3"
     },
     {
       "codigo": 4,
       "ra": "A44444",
       "nome": "Marie Claire",
-      "curso": "Curso4",
-      "turno": "Turno4",
-      "login": "aluno4",
+      "email": "email4",
+      "usuario": "aluno4",
       "senha": "aluno4"
     },
     {
       "codigo": 5,
       "ra": "A55555",
       "nome": "Monique Silva",
-      "curso": "Curso5",
-      "turno": "Turno5",
-      "login": "aluno5",
+      "email": "email5",
+      "usuario": "aluno5",
       "senha": "aluno5"
     },
     {
       "codigo": 6,
       "ra": "A66666",
       "nome": "Ernest Bob",
-      "curso": "Curso6",
-      "turno": "Turno6",
-      "login": "aluno6",
+      "email": "email6",
+      "usuario": "aluno6",
       "senha": "aluno6"
     },
     {
       "codigo": 7,
       "ra": "A77777",
       "nome": "Raquel Reis",
-      "curso": "Curso7",
-      "turno": "Turno7",
-      "login": "aluno7",
+      "email": "email7",
+      "usuario": "aluno7",
       "senha": "aluno7"
     },
     {
       "codigo": 8,
       "ra": "A88888",
       "nome": "Michele Lara",
-      "curso": "Curso8",
-      "turno": "Turno8",
-      "login": "aluno8",
+      "email": "email8",
+      "usuario": "aluno8",
       "senha": "aluno8"
     },
     {
       "codigo": 9,
       "ra": "A99999",
       "nome": "Miag Toledo",
-      "curso": "Curso9",
-      "turno": "Turno9",
-      "login": "aluno9",
+      "email": "email9",
+      "usuario": "aluno9",
       "senha": "aluno9"
     },
     {
       "codigo": 10,
       "ra": "A1010101010",
       "nome": "Miguel Toledo",
-      "curso": "Curso10",
-      "turno": "Turno10",
-      "login": "aluno10",
+      "email": "Turno10",
+      "usuario": "aluno10",
       "senha": "aluno10"
     },
     {
       "codigo": 11,
       "ra": "A1111111111",
       "nome": "Daniel Moura",
-      "curso": "Curso11",
-      "turno": "Turno11",
-      "login": "aluno11",
+      "email": "email11",
+      "usuario": "aluno11",
       "senha": "aluno11"
     },
     {
       "codigo": 12,
       "ra": "A1212121212",
       "nome": "Ricardo Silva",
-      "curso": "Curso12",
-      "turno": "Turno12",
-      "login": "aluno12",
+      "email": "email12",
+      "usuario": "aluno12",
       "senha": "aluno12"
     }
   ]

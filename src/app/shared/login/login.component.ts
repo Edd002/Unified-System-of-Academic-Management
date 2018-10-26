@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'usam-login',
@@ -8,11 +9,16 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public router: Router) { }
+  constructor(private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     onEnterKey();
   }
+
+  profileForm = this.formBuilder.group({
+    usuario: [''],
+    senha: ['']
+  });
 
   rotaLogin: string;
   loginErro: boolean;

@@ -1,15 +1,19 @@
 <header class="main-header">
   <!-- Logo -->
-  <a href="#" class="logo">
+  <a role="button" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini"><b>USAM</b></span>
+    <span class="logo-mini">
+      <b>USAM</b>
+    </span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b>Unified System of Academic Management</b></span>
+    <span class="logo-lg">
+      <b>USAM</b>
+    </span>
   </a>
   <!-- Header Navbar: style can be found in header.less -->
   <nav class="navbar navbar-static-top">
     <!-- Sidebar toggle button-->
-    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+    <a role="button" class="sidebar-toggle" data-toggle="push-menu" role="button">
       <span class="sr-only">Alternar navegação</span>
     </a>
 
@@ -17,7 +21,7 @@
       <ul class="nav navbar-nav">
         <!-- Messages: style can be found in dropdown.less-->
         <li class="dropdown messages-menu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <a role="button" class="dropdown-toggle" data-toggle="dropdown">
             <i class="fa fa-envelope-o"></i>
             <span class="label label-success">4</span>
           </a>
@@ -28,7 +32,7 @@
               <ul class="menu">
                 <li>
                   <!-- start message -->
-                  <a href="#">
+                  <a role="button">
                     <div class="pull-left">
                       <img src="src/assets/img/user7-128x128.jpg" class="img-circle" alt="User Image">
                     </div>
@@ -42,12 +46,12 @@
                 <!-- end message -->
               </ul>
             </li>
-            <li class="footer"><a href="#">Visualizar todas as mensagens</a></li>
+            <li class="footer"><a role="button">Visualizar todas as mensagens</a></li>
           </ul>
         </li>
         <!-- Notifications: style can be found in dropdown.less -->
         <li class="dropdown notifications-menu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <a role="button" class="dropdown-toggle" data-toggle="dropdown">
             <i class="fa fa-bell-o"></i>
             <span class="label label-warning">3</span>
           </a>
@@ -57,18 +61,18 @@
               <!-- inner menu: contains the actual data -->
               <ul class="menu">
                 <li>
-                  <a href="#">
+                  <a role="button">
                     <i class="fa fa-users text-aqua"></i> Você possui 3 provas marcadas
                   </a>
                 </li>
               </ul>
             </li>
-            <li class="footer"><a href="#">Visualizar todas as notificações</a></li>
+            <li class="footer"><a role="button">Visualizar todas as notificações</a></li>
           </ul>
         </li>
         <!-- Tasks: style can be found in dropdown.less -->
         <li class="dropdown tasks-menu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <a role="button" class="dropdown-toggle" data-toggle="dropdown">
             <i class="fa fa-flag-o"></i>
             <span class="label label-danger">1</span>
           </a>
@@ -79,7 +83,7 @@
               <ul class="menu">
                 <li>
                   <!-- Task item -->
-                  <a href="#">
+                  <a role="button">
                     <h3>
                       Total de atividades entregues
                       <small class="pull-right">20%</small>
@@ -96,13 +100,13 @@
               </ul>
             </li>
             <li class="footer">
-              <a href="#">Visualizar todas as atividades</a>
+              <a role="button">Visualizar todas as atividades</a>
             </li>
           </ul>
         </li>
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown user user-menu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <a role="button" class="dropdown-toggle" data-toggle="dropdown">
             <img src="src/assets/img/user7-128x128.jpg" class="user-image" alt="User Image">
             <span class="hidden-xs">Primeiro Aluno</span>
           </a>
@@ -119,10 +123,10 @@
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="pull-left">
-                <a href="#" class="btn btn-default btn-flat">Perfil Acadêmico</a>
+                <a role="button" class="btn btn-default btn-flat">Perfil Acadêmico</a>
               </div>
               <div class="pull-right">
-                <a [routerLink]="['/login']" class="btn btn-default btn-flat">Sair</a>
+                <a [routerLink]="['/login']" class="btn btn-primary btn-flat">Sair</a>
               </div>
             </li>
           </ul>

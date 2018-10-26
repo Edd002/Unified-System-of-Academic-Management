@@ -1,6 +1,6 @@
 <div class="login-box">
   <div class="login-logo">
-    <a href="#">
+    <a role="button">
       <b>Unified System of Academic Management</b>
     </a>
   </div>
@@ -8,13 +8,13 @@
   <div class="login-box-body">
     <p class="login-box-msg">Faça o login para iniciar sua sessão</p>
 
-    <form action="#" method="post">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
       <div class="form-group has-feedback">
-        <input autofocus #usuario type="text" id="txt-usuario" class="form-control" placeholder="Usuário">
+        <input #usuario formControlName="usuario" autofocus type="text" id="txt-usuario" class="form-control" placeholder="Usuário">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input #senha type="password" id="txt-senha" class="form-control" placeholder="Senha">
+        <input #senha formControlName="senha" type="password" id="txt-senha" class="form-control" placeholder="Senha">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -44,7 +44,7 @@
       </div>
     </ng-template>
 
-    <a href="#">Esqueceu a senha?</a>
+    <a role="button">Esqueceu a senha?</a>
     <br>
     <a [routerLink]="['/register']" class="text-center">Primeiro acesso?</a>
 
