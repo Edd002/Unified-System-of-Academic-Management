@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'usam-cadastrar-professor',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarProfessorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
   }
+  CadastroDisiciplinaForm = this.formBuilder.group({
+    usuario: [''],
+    senha: ['']
+  });
 
 }
