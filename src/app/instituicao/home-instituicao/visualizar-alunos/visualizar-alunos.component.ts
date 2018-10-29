@@ -24,7 +24,7 @@ export class VisualizarAlunosComponent implements OnInit {
     );
   }
 
-  searchAluno() {
+  searchAlunos() {
     this.alunoService.getAllAlunosBySearch(this.query).subscribe(
       data => this.listAlunos = data
     );

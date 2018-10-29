@@ -8,6 +8,19 @@
         <i class="fa fa-minus"></i>
       </button>
     </div>
+
+    <!-- search -->
+    <div class="sidebar-form">
+      <div class="input-group">
+        <input [(ngModel)]="query" (keyup)="searchProfessores()" class="form-control" placeholder="Pesquisar..." type="text">
+        <span class="input-group-btn">
+          <button (click)="searchProfessores()" id="search-btn" class="btn btn-flat">
+            <i class="fa fa-search"></i>
+          </button>
+        </span>
+      </div>
+    </div>
+    <!-- /.search -->
   </div>
   <!-- /.box-header -->
   <div class="box-body">
@@ -24,7 +37,9 @@
                 <th rowspan="1" colspan="1">Registro Acadêmico</th>
                 <th rowspan="1" colspan="1">Nome</th>
                 <th rowspan="1" colspan="1">E-mail</th>
-                <th rowspan="1" colspan="1">Usuário</th>
+                <th rowspan="1" colspan="1">Telefones</th>
+                <th rowspan="1" colspan="1">Endereço</th>
+                <th rowspan="1" colspan="1">Disciplinas Lecionadas</th>
                 <th rowspan="1" colspan="1">Remover</th>
               </tr>
             </thead>
@@ -33,7 +48,9 @@
                 <td>{{professor?.ra}}</td>
                 <td>{{professor?.nome}}</td>
                 <td>{{professor?.email}}</td>
-                <td>{{professor?.usuario}}</td>
+                <td>{{professor?.telefones}}</td>
+                <td>{{professor?.endereco}}</td>
+                <td>{{professor?.disciplinasLecionadas}}</td>
                 <td>
                   <button type="button" class="btn btn-block btn-danger">Remover</button>
                 </td>
@@ -44,7 +61,9 @@
                 <th rowspan="1" colspan="1">Registro Acadêmico</th>
                 <th rowspan="1" colspan="1">Nome</th>
                 <th rowspan="1" colspan="1">E-mail</th>
-                <th rowspan="1" colspan="1">Usuário</th>
+                <th rowspan="1" colspan="1">Telefones</th>
+                <th rowspan="1" colspan="1">Endereço</th>
+                <th rowspan="1" colspan="1">Disciplinas Lecionadas</th>
                 <th rowspan="1" colspan="1">Remover</th>
               </tr>
             </tfoot>

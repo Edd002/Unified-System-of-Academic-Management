@@ -10,6 +10,7 @@ import { DisciplinaService } from '../../../disciplina/disciplina.service';
 export class VisualizarDisciplinasComponent implements OnInit {
 
   listDisciplinas: Disciplina[];
+  query: string;
 
   constructor(private disciplinaService: DisciplinaService) { }
 
@@ -23,4 +24,9 @@ export class VisualizarDisciplinasComponent implements OnInit {
     );
   }
 
+  searchDisciplinas() {
+    this.disciplinaService.getAllDisciplinasBySearch(this.query).subscribe(
+      data => this.listDisciplinas = data
+    );
+  }
 }

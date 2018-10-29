@@ -17,7 +17,11 @@ export class ProfessorService {
         return this.http.get<Professor[]>(`${FACELIST_API}/professores?nome_like=${query}`);
     }
 
-    getProfessoresById(id: number): Observable<Professor> {
-        return this.http.get<Professor>(`${FACELIST_API}/professores/${id}`);
+    getProfessorByRA(ra: string): Observable<Professor> {
+        return this.http.get<Professor>(`${FACELIST_API}/professores?ra=${ra}`);
+    }
+
+    getProfessorByCodigo(codigo: number): Observable<Professor> {
+        return this.http.get<Professor>(`${FACELIST_API}/professores?codigo=${codigo}`);
     }
 }

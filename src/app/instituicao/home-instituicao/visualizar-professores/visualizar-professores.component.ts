@@ -16,6 +16,7 @@ export class VisualizarProfessoresComponent implements OnInit {
   }
 
   listProfessores: Professor[];
+  query: string;
 
   loadProfessores() {
     this.professorService.getAllProfessores().subscribe(
@@ -23,4 +24,9 @@ export class VisualizarProfessoresComponent implements OnInit {
     );
   }
 
+  searchProfessores() {
+    this.professorService.getAllProfessoresBySearch(this.query).subscribe(
+      data => this.listProfessores = data
+    );
+  }
 }

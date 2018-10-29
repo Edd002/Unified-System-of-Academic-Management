@@ -5,11 +5,11 @@
 
 .register-logo {
     background-color: #3C8DBC !important;
+    margin: 0 !important;
+    padding: 10px !important;
 }
 
 .register-box {
-    background-color: #3C8DBC !important;
-    height: 465px !important;
     width: 500px !important;
     position: absolute !important;
     margin: auto !important;
@@ -17,9 +17,13 @@
     right: 0 !important;
     bottom: 0 !important;
     left: 0 !important;
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
 }
 
 .warning {
     color: red;
-    font-size: 0.8em;
+    font-size: 0.6em;
 }

@@ -8,6 +8,19 @@
         <i class="fa fa-minus"></i>
       </button>
     </div>
+
+    <!-- search -->
+    <div class="sidebar-form">
+      <div class="input-group">
+        <input [(ngModel)]="query" (keyup)="searchDisciplinas()" class="form-control" placeholder="Pesquisar..." type="text">
+        <span class="input-group-btn">
+          <button (click)="searchDisciplinas()" id="search-btn" class="btn btn-flat">
+            <i class="fa fa-search"></i>
+          </button>
+        </span>
+      </div>
+    </div>
+    <!-- /.search -->
   </div>
   <!-- /.box-header -->
   <div class="box-body">
@@ -23,6 +36,7 @@
               <tr>
                 <th rowspan="1" colspan="1">Nome</th>
                 <th rowspan="1" colspan="1">Turnos</th>
+                <th rowspan="1" colspan="1">Cursos</th>
                 <th rowspan="1" colspan="1">Remover</th>
               </tr>
             </thead>
@@ -30,6 +44,7 @@
               <tr role="row" class="odd" *ngFor="let disciplina of listDisciplinas">
                 <td>{{disciplina?.nome}}</td>
                 <td>{{disciplina?.turnos}}</td>
+                <td>{{disciplina?.cursos}}</td>
                 <td>
                   <button type="button" class="btn btn-block btn-danger">Remover</button>
                 </td>
@@ -39,6 +54,7 @@
               <tr>
                 <th rowspan="1" colspan="1">Nome</th>
                 <th rowspan="1" colspan="1">Turnos</th>
+                <th rowspan="1" colspan="1">Cursos</th>
                 <th rowspan="1" colspan="1">Remover</th>
               </tr>
             </tfoot>

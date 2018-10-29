@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './shared/login/login.component';
@@ -29,6 +29,7 @@ import { InstituicaoService } from './instituicao/instituicao.service';
 import { DisciplinaService } from './disciplina/disciplina.service';
 import { AlunoService } from './aluno/aluno.service';
 import { ProfessorService } from './professor/professor.service';
+import { AuthenticatorService } from './shared/authenticator-service/authenticator.service';
 
 import { AlterarDisciplinaComponent } from './instituicao/home-instituicao/alterar-disciplina/alterar-disciplina.component';
 import { AlterarAlunoComponent } from './instituicao/home-instituicao/alterar-aluno/alterar-aluno.component';
@@ -95,6 +96,7 @@ import { CronogramaAcademicoComponent as CronogramaAcademicoComponentAluno } fro
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(ROUTES)
   ],
@@ -102,7 +104,8 @@ import { CronogramaAcademicoComponent as CronogramaAcademicoComponentAluno } fro
     InstituicaoService,
     DisciplinaService,
     AlunoService,
-    ProfessorService
+    ProfessorService,
+    AuthenticatorService
   ],
   bootstrap: [AppComponent]
 })

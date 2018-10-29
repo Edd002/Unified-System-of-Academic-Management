@@ -17,7 +17,7 @@ export class DisciplinaService {
         return this.http.get<Disciplina[]>(`${FACELIST_API}/disciplinas?nome_like=${query}`);
     }
 
-    getDisciplinasById(id: number): Observable<Disciplina> {
-        return this.http.get<Disciplina>(`${FACELIST_API}/disciplinas/${id}`);
+    getDisciplinaByCodigo(codigo: number): Observable<Disciplina> {
+        return this.http.get<Disciplina>(`${FACELIST_API}/disciplinas/${codigo}`);
     }
 }
