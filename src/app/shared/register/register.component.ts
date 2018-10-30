@@ -6,6 +6,7 @@ import { Aluno } from '../../aluno/aluno.model';
 import { AuthenticatorService } from '../authenticator-service/authenticator.service';
 import { ProfessorService } from '../../professor/professor.service';
 import { AlunoService } from '../../aluno/aluno.service';
+import { isNullOrUndefined } from 'util';
 
 @Component({
   selector: 'usam-register',
@@ -15,48 +16,43 @@ import { AlunoService } from '../../aluno/aluno.service';
 export class RegisterComponent implements OnInit {
 
   formRegister: FormGroup;
-  formRegisterValidator: boolean;
+  formRegisterReadOnly: boolean;
   user: User;
+  professor: Professor;
+  aluno: Aluno;
 
   constructor(private formBuilder: FormBuilder, private authenticatorService: AuthenticatorService, private alunoService: AlunoService, private professorService: ProfessorService) {
     this.formRegister = this.formBuilder.group({
       registroAcademico: [{ value: null, disabled: false }, [Validators.required]],
-      nome: [{ value: null, disabled: true }, [Validators.required]],
-      email: [{ value: null, disabled: true }, [Validators.required, Validators.email]],
-      usuario: [{ value: null, disabled: true }, Validators.required, Validators.minLength(6)],
-      senha: [{ value: null, disabled: true }, [Validators.required, Validators.minLength(7)]],
-      confirmarSenha: [{ value: null, disabled: true }, [Validators.required, Validators.minLength(7)]]
+      nome: [{ value: null, disabled: false }, [Validators.required]],
+      email: [{ value: null, disabled: false }, [Validators.required, Validators.email]],
+      usuario: [{ value: null, disabled: false }, [Validators.required, Validators.minLength(6)]],
+      senha: [{ value: null, disabled: false }, [Validators.required, Validators.minLength(7)]],
+      confirmarSenha: [{ value: null, disabled: false }, [Validators.required, Validators.minLength(7)]]
     });
   }
 
   ngOnInit() {
-  }
-
-  enableFormRegisterFields() {
-    this.formRegister.controls.nome.disable();
-    this.formRegister.controls.email.disable();
-    this.formRegister.controls.usuario.disable();
-    this.formRegister.controls.senha.disable();
-    this.formRegister.controls.confirmarSenha.disable();
+    this.formRegisterReadOnly = true;
   }
 
   searchUserByRa() {
-    let ra: string = this.formRegister.get('registroAcademico').value;
-
-    let professor: Professor;
+    let ra: string = this.formRegister.controls.registroAcademico.value;
+    
     this.professorService.getProfessorByRA(ra).subscribe(
-      data => professor = data
+      data => this.professor = data
     );
-
-    let aluno: Aluno;
+    
     this.alunoService.getAlunoByRA(ra).subscribe(
-      data => aluno = data
+      data => this.aluno = data
     );
 
-    if (professor == null) {
-      alert('Continuar com o formulário e os campos finais desativados');
+    if ( true /*Object.keys(this.professor).length != 0*/ ) {
+      this.formRegisterReadOnly = true;
+      //console.log('Continuar com o formulário e os campos desativados');
     } else {
-      alert('Ativar os campos finais e verificá-los a fim de ativar o formulário');
+      //this.formRegisterReadOnly = false;
+      //console.log('Ativar os campos e validá-los');
     }
   }
 
