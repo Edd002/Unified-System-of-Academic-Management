@@ -65,7 +65,7 @@ export class RegisterComponent implements OnInit {
       "usuario": this.formRegister.controls.usuario.value,
       "senha": this.formRegister.controls.senha.value
     }
-
+ 
     //this.authenticatorService.register(user);
   }
 }

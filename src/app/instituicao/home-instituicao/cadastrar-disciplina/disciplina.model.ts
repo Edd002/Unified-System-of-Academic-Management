@@ -1,6 +1,6 @@
 export interface Disciplina {
-    nome: string;
-    carga_horaria: number;
     codigo: number;
-    conteudo: string;
+    nome: string;
+    turno_disciplina: number;
+    cursos_disciplina: string;
 }

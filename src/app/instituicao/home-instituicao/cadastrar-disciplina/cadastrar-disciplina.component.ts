@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {Disciplina} from './disciplina.model'
 
 @Component({
   selector: 'usam-cadastrar-disciplina',
@@ -12,9 +13,8 @@ export class CadastrarDisciplinaComponent implements OnInit {
 
     this.CadastroDisiciplinaForm = this.formBuilder.group({
       nome_disciplina: ['', Validators.required],
-      carga_horaria: ['', Validators.required],
-      codigo_disciplina: ['', Validators.required],
-      conteudo_disciplina: ['', Validators.required] 
+      turno_disciplina: ['', Validators.required],
+      cursos_disciplina: ['', Validators.required]
     });
 
    }
@@ -27,8 +27,14 @@ export class CadastrarDisciplinaComponent implements OnInit {
     senha: ['']
   });
 
-  salvar(nome_disciplina: string, carga_horaria: number,codigo_disciplina: string, conteudo_disciplina: string){
-    alert(nome_disciplina);
+  salvarDisciplina(){
+    let disciplina: Disciplina = {
+      "codigo": null,
+      "nome": this.CadastroDisiciplinaForm.controls.name.value,
+      "turno_disciplina": this.CadastroDisiciplinaForm.controls.email.value,
+      "cursos_disciplina": this.CadastroDisiciplinaForm.controls.email.value,
+    }
+
   }
 
   
