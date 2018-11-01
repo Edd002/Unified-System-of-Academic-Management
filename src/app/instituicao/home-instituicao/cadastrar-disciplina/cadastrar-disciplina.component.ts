@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {Disciplina} from './disciplina.model';
+import { FACELIST_API } from 'src/app/app.api';
+import { Observable } from 'rxjs/internal/Observable';
+import { HttpClient } from '@angular/common/http'
+
 
 @Component({
   selector: 'usam-cadastrar-disciplina',
@@ -8,27 +13,34 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class CadastrarDisciplinaComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder) {
+  CadastroDisiciplinaForm: FormGroup;
 
+  constructor(private formBuilder: FormBuilder,private http:HttpClient) {
     this.CadastroDisiciplinaForm = this.formBuilder.group({
       nome_disciplina: ['', Validators.required],
-      carga_horaria: ['', Validators.required],
-      codigo_disciplina: ['', Validators.required],
-      conteudo_disciplina: ['', Validators.required] 
+      turno_disciplina: ['', Validators.required],
+      cursos_disciplina: ['', Validators.required]
     });
-
    }
 
   ngOnInit() {
   }
 
-  CadastroDisiciplinaForm = this.formBuilder.group({
-    usuario: [''],
-    senha: ['']
-  });
 
-  salvar(nome_disciplina: string, carga_horaria: number,codigo_disciplina: string, conteudo_disciplina: string){
-    alert(nome_disciplina);
+  salvarDisciplina() {
+    let disciplina: Disciplina = {
+      "codigo": null,
+      "nome": this.CadastroDisiciplinaForm.controls.nome_disciplina.value,
+      "turnos": this.CadastroDisiciplinaForm.controls.turno_disciplina.value,
+      "cursos": this.CadastroDisiciplinaForm.controls.cursos_disciplina.value
+    }
+      //console.log(disciplina);  
+    this.registrarDisciplina(disciplina);
+  }
+  
+  registrarDisciplina(disciplina:Disciplina):Observable<Disciplina>{
+    console.log(disciplina);  
+    return this.http.post<Disciplina>(`${FACELIST_API}/disciplinas`,disciplina);
   }
 
   
