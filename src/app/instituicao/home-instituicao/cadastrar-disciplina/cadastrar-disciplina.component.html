@@ -1,29 +1,3 @@
-<div class="box box-success">
-  <div class="box-header with-border">
-    <h3 class="box-title">Cadastro Disicplina</h3>
-  </div>
-  <!-- /.box-header -->
-  <!-- form start -->
-  <form role="form formCadastro" [formGroup]="CadastroDisiciplinaForm" (ngSubmit)="salvarDisciplina()">
-    <div class="box-body">
-      <div class="form-group col-md-6">
-        <label for="exampleInputEmail1">Nome Disciplina</label>
-        <input type="text" class="form-control" #nome_disciplina formControlName="nome_disciplina" id="nome_disciplina" placeholder="" name="nome_disciplina">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="exampleInputPassword1">Turno </label>
-        <input type="text" class="form-control" #turno_disciplina formControlName="turno_disciplina" id="turno_disciplina" placeholder="" name="turno_disciplina">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="exampleInputEmail1">Cursos</label>
-        <input type="text" class="form-control" #cursos_disciplina formControlName="cursos_disciplina" id="cursos_disciplina" placeholder="" name="cursos_disciplina">
-      </div>
-
-    </div>
-    <!-- /.box-body -->
-
-    <div class="box-footer">
-      <button (click)="salvar(nome_disciplina.value,turno_disciplina.value,cursos_disciplina.value)" type="submit" class="btn btn-success   pull-right"><i class="fa fa-save"></i> Cadastrar</button>
-    </div>
-  </form>
-</div>
+<p>
+  cadastrar-disciplinas works!
+</p>

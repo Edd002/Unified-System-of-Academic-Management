@@ -1,33 +1,3 @@
-<div class="box box-success">
-  <div class="box-header with-border">
-    <h3 class="box-title">Cadastro Professor</h3>
-  </div>
-  <!-- /.box-header -->
-  <!-- form start -->
-  <form role="form formCadastro" [formGroup]="CadastroDisiciplinaForm" (ngSubmit)="update()">
-    <div class="box-body">
-      <div class="form-group col-md-6">
-        <label for="exampleInputEmail1">Nome Disciplina</label>
-        <input type="text" class="form-control" #nome_disciplina formControlName="nome_disciplina" id="nome_disciplina" placeholder="" name="nome_disciplina">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="exampleInputPassword1">Carga Horária</label>
-        <input type="number" class="form-control" #carga_horaria_disciplina formControlName="carga_horaria_disciplina" id="carga_horaria_disciplina" placeholder="" name="carga_horaria">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="exampleInputEmail1">Código</label>
-        <input type="text" class="form-control" #codigo_disciplina formControlName="codigo_disciplina" id="codigo_disciplina" placeholder="" name="codigo_disciplina">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="exampleInputPassword1">Conteúdo</label>
-        <input type="text" class="form-control" #conteudo_disciplina formControlName="conteudo_disciplina" id="conteudo_disciplina" placeholder="" name="conteudo_disciplina">
-      </div>
-  
-    </div>
-    <!-- /.box-body -->
-
-    <div class="box-footer">
-      <button (click)="salvar(nome_disciplina.value)" type="submit" class="btn btn-success   pull-right"><i class="fa fa-save"></i> Cadastrar</button>
-    </div>
-  </form>
-</div>
+<p>
+  cadastrar-professores works!
+</p>

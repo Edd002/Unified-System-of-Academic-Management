@@ -4,9 +4,6 @@ import { LoginComponent } from './shared/login/login.component';
 import { RegisterComponent } from './shared/register/register.component';
 
 import { InstituicaoComponent } from './instituicao/instituicao.component';
-import { AlunoComponent } from './aluno/aluno.component';
-import { ProfessorComponent } from './professor/professor.component';
-
 import { CadastrarDisciplinaComponent } from './instituicao/home-instituicao/cadastrar-disciplina/cadastrar-disciplina.component';
 import { CadastrarProfessorComponent } from './instituicao/home-instituicao/cadastrar-professor/cadastrar-professor.component';
 import { CadastrarAlunoComponent } from './instituicao/home-instituicao/cadastrar-aluno/cadastrar-aluno.component';
@@ -17,11 +14,13 @@ import { VisualizarDisciplinasComponent } from './instituicao/home-instituicao/v
 import { VisualizarProfessoresComponent } from './instituicao/home-instituicao/visualizar-professores/visualizar-professores.component';
 import { VisualizarAlunosComponent } from './instituicao/home-instituicao/visualizar-alunos/visualizar-alunos.component';
 
+import { ProfessorComponent } from './professor/professor.component';
 import { QuadroAvisosComponent as QuadroAvisosComponentProfessor } from './professor/home-professor/quadro-avisos/quadro-avisos.component';
 import { GerenciamentoFaltasComponent } from './professor/home-professor/gerenciamento-faltas/gerenciamento-faltas.component';
 import { GerenciamentoNotasComponent } from './professor/home-professor/gerenciamento-notas/gerenciamento-notas.component';
 import { CronogramaAcademicoComponent as CronogramaAcademicoComponentProfessor } from './professor/home-professor/cronograma-academico/cronograma-academico.component';
 
+import { AlunoComponent } from './aluno/aluno.component';
 import { QuadroAvisosComponent as QuadroAvisosComponentAluno } from './aluno/home-aluno/quadro-avisos/quadro-avisos.component';
 import { DisciplinasMatriculadasComponent } from './aluno/home-aluno/disciplinas-matriculadas/disciplinas-matriculadas.component';
 import { CronogramaAcademicoComponent as CronogramaAcademicoComponentAluno } from './aluno/home-aluno/cronograma-academico/cronograma-academico.component';
@@ -61,4 +60,5 @@ export const ROUTES: Routes = [
             { path: 'cronograma-academico', component: CronogramaAcademicoComponentAluno }
         ]
     },
+    { path: '**', redirectTo: 'login' }
 ]
