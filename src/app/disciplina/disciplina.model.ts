@@ -1,5 +1,6 @@
 export interface Disciplina {
-    codigo: number;
+    id: number;
     nome: string;
-    turnos: string;
+    turno: string;
+    cursos: string;
 }

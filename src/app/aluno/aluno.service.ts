@@ -21,7 +21,7 @@ export class AlunoService {
         return this.http.get<Aluno>(`${FACELIST_API}/alunos?ra=${ra}`);
     }
 
-    getAlunoByCodigo(codigo: number): Observable<Aluno> {
-        return this.http.get<Aluno>(`${FACELIST_API}/alunos?codigo=${codigo}`);
+    getAlunoById(id: number): Observable<Aluno> {
+        return this.http.get<Aluno>(`${FACELIST_API}/alunos?id=${id}`);
     }
 }

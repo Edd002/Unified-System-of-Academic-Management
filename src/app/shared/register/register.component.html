@@ -8,12 +8,12 @@
   <div class="register-box-body">
     <p class="login-box-msg">Primeiro acesso no sistema</p>
 
-    <form [formGroup]="formRegister" (ngSubmit)="submit()">
+    <form [formGroup]="formGroupRegister" (ngSubmit)="submit()">
       <div class="form-group has-feedback">
         <input (keyup)="searchUserByRa()" formControlName="registroAcademico" autofocus type="text" id="txt-registro-academico" class="form-control" placeholder="Registro Acadêmico" title="Campo de registro acadêmico obrigatório">
         <span class="glyphicon glyphicon-book form-control-feedback"></span>
-        <div class="warning" *ngIf="!formRegister.controls.registroAcademico.valid && formRegister.controls.registroAcademico.touched">
-          Registro acadêmico inválido
+        <div class="warning" *ngIf="formGroupRegister.controls.registroAcademico.invalid && formGroupRegister.controls.registroAcademico.dirty && formGroupRegister.controls.registroAcademico.touched || raRegistred">
+          Registro acadêmico inválido ou já registrado
         </div>
       </div>
       <div class="form-group has-feedback">
@@ -25,23 +25,23 @@
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input formControlName="usuario" [readonly]="formRegisterReadOnly" type="text" id="txt-usuario" class="form-control" placeholder="Usuário" title="Campo de usuário obrigatório">
+        <input formControlName="usuario" [readonly]="formGroupRegisterReadOnly" type="text" id="txt-usuario" class="form-control" placeholder="Usuário" title="Campo de usuário obrigatório. 6 a 12 caracteres.">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
-        <div class="warning" *ngIf="!formRegister.controls.usuario.valid && formRegister.controls.usuario.touched">
+        <div class="warning" *ngIf="formGroupRegister.controls.usuario.invalid && formGroupRegister.controls.usuario.dirty && formGroupRegister.controls.usuario.touched && !formGroupRegisterReadOnly">
           Usuário inválido
         </div>
       </div>
       <div class="form-group has-feedback">
-        <input formControlName="senha" [readonly]="formRegisterReadOnly" type="password" id="txt-senha" class="form-control" placeholder="Senha" title="Campo de senha obrigatório">
+        <input formControlName="senha" [readonly]="formGroupRegisterReadOnly" type="password" id="txt-senha" class="form-control" placeholder="Senha" title="Campo de senha obrigatório. 7 a 21 caracteres.">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-        <div class="warning" *ngIf="!formRegister.controls.senha.valid && formRegister.controls.senha.touched">
+        <div class="warning" *ngIf="formGroupRegister.controls.senha.invalid && formGroupRegister.controls.senha.dirty && formGroupRegister.controls.senha.touched && !formGroupRegisterReadOnly">
           Senha inválida
         </div>
       </div>
       <div class="form-group has-feedback">
-        <input formControlName="confirmarSenha" [readonly]="formRegisterReadOnly" type="password" id="txt-confirmar-senha" class="form-control" placeholder="Confirmar senha" title="Campo de confirmar senha obrigatório">
+        <input formControlName="confirmarSenha" [readonly]="formGroupRegisterReadOnly" type="password" id="txt-confirmar-senha" class="form-control" placeholder="Confirmar senha" title="Campo de confirmar senha obrigatório. 7 a 21 caracteres.">
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-        <div class="warning" *ngIf="!formRegister.controls.confirmarSenha.valid && formRegister.controls.confirmarSenha.touched">
+        <div class="warning" *ngIf="formGroupRegister.controls.confirmarSenha.invalid && formGroupRegister.controls.confirmarSenha.dirty && formGroupRegister.controls.confirmarSenha.touched && !formGroupRegisterReadOnly">
           Confirmar senha inválida
         </div>
       </div>
@@ -55,7 +55,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" id="btn-cadastrar" class="btn btn-primary btn-block btn-flat" [disabled]="formRegister.invalid">Cadastrar</button>
+          <button type="submit" id="btn-cadastrar" class="btn btn-primary btn-block btn-flat" [disabled]="formGroupRegister.invalid">Cadastrar</button>
         </div>
         <!-- /.col -->
       </div>

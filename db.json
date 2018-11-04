@@ -1,479 +1,495 @@
 {
   "instituicao": [
     {
-      "codigo": 0,
+      "id": 0,
       "ra": "I00000",
       "nome": "Instituição",
-      "email": "email0",
+      "email": "email0@email.com",
       "telefones": "telefones0",
       "endereco": "endereco0"
     }
   ],
   "disciplinas": [
     {
-      "codigo": 0,
+      "id": 0,
       "nome": "Nome1",
-      "turnos": "Turnos1",
+      "turno": "Turnos1",
       "cursos": "Cursos1"
     },
     {
-      "codigo": 1,
+      "id": 1,
       "nome": "Nome2",
-      "turnos": "Turnos2",
+      "turno": "Turnos2",
       "cursos": "Cursos2"
     },
     {
-      "codigo": 2,
+      "id": 2,
       "nome": "Nome3",
-      "turnos": "Turnos3",
+      "turno": "Turnos3",
       "cursos": "Cursos3"
     },
     {
-      "codigo": 3,
+      "id": 3,
       "nome": "Nome4",
-      "turnos": "Turnos4",
+      "turno": "Turnos4",
       "cursos": "Cursos4"
     },
     {
-      "codigo": 4,
+      "id": 4,
       "nome": "Nome5",
-      "turnos": "Turnos5",
+      "turno": "Turnos5",
       "cursos": "Cursos5"
     },
     {
-      "codigo": 5,
+      "id": 5,
       "nome": "Nome6",
-      "turnos": "Turnos6",
+      "turno": "Turnos6",
       "cursos": "Cursos6"
     },
     {
-      "codigo": 6,
+      "id": 6,
       "nome": "Nome7",
-      "turnos": "Turnos7",
+      "turno": "Turnos7",
       "cursos": "Cursos7"
     },
     {
-      "codigo": 7,
+      "id": 7,
       "nome": "Nome8",
-      "turnos": "Turnos8",
+      "turno": "Turnos8",
       "cursos": "Cursos8"
     },
     {
-      "codigo": 8,
+      "id": 8,
       "nome": "Nome9",
-      "turnos": "Turnos9",
+      "turno": "Turnos9",
       "cursos": "Cursos9"
     },
     {
-      "codigo": 9,
+      "id": 9,
       "nome": "Nome10",
-      "turnos": "Turnos10",
+      "turno": "Turnos10",
       "cursos": "Cursos10"
     },
     {
-      "codigo": 10,
+      "id": 10,
       "nome": "Nome11",
-      "turnos": "Turnos11",
+      "turno": "Turnos11",
       "cursos": "Cursos11"
     },
     {
-      "codigo": 11,
+      "id": 11,
       "nome": "Nome12",
-      "turnos": "Turnos12",
+      "turno": "Turnos12",
       "cursos": "Cursos12"
     }
   ],
   "professores": [
     {
-      "codigo": 0,
+      "id": 0,
       "ra": "P11111",
       "nome": "Professor1",
-      "email": "email1",
+      "email": "email1@email.com",
       "telefones": "telefones1",
       "endereco": "endereco1",
       "disciplinasLecionadas": "disciplinas1"
     },
     {
-      "codigo": 1,
+      "id": 1,
       "ra": "P22222",
       "nome": "Professor2",
-      "email": "email2",
+      "email": "email2@email.com",
       "telefones": "telefones2",
       "endereco": "endereco2",
       "disciplinasLecionadas": "disciplinas2"
     },
     {
-      "codigo": 2,
+      "id": 2,
       "ra": "P33333",
       "nome": "Professor3",
-      "email": "email3",
+      "email": "email3@email.com",
       "telefones": "telefones3",
       "endereco": "endereco3",
       "disciplinasLecionadas": "disciplinas3"
     },
     {
-      "codigo": 3,
+      "id": 3,
       "ra": "P44444",
       "nome": "Professor4",
-      "email": "email4",
+      "email": "email4@email.com",
       "telefones": "telefones4",
       "endereco": "endereco4",
       "disciplinasLecionadas": "disciplinas4"
     },
     {
-      "codigo": 4,
+      "id": 4,
       "ra": "P55555",
       "nome": "Professor5",
-      "email": "email5",
+      "email": "email5@email.com",
       "telefones": "telefones5",
       "endereco": "endereco5",
       "disciplinasLecionadas": "disciplinas5"
     },
     {
-      "codigo": 5,
+      "id": 5,
       "ra": "P66666",
       "nome": "Professor6",
-      "email": "email6",
+      "email": "email6@email.com",
       "telefones": "telefones6",
       "endereco": "endereco6",
       "disciplinasLecionadas": "disciplinas6"
     },
     {
-      "codigo": 6,
+      "id": 6,
       "ra": "P77777",
       "nome": "Professor7",
-      "email": "email7",
+      "email": "email7@email.com",
       "telefones": "telefones7",
       "endereco": "endereco7",
       "disciplinasLecionadas": "disciplinas7"
     },
     {
-      "codigo": 7,
+      "id": 7,
       "ra": "P88888",
       "nome": "Professor8",
-      "email": "email8",
+      "email": "email8@email.com",
       "telefones": "telefones8",
       "endereco": "endereco8",
       "disciplinasLecionadas": "disciplinas8"
     },
     {
-      "codigo": 8,
+      "id": 8,
       "ra": "P99999",
       "nome": "Professor9",
-      "email": "email9",
+      "email": "email9@email.com",
       "telefones": "telefones9",
       "endereco": "endereco9",
       "disciplinasLecionadas": "disciplinas9"
     },
     {
-      "codigo": 9,
+      "id": 9,
       "ra": "P1010101010",
       "nome": "Professor10",
-      "email": "email10",
+      "email": "email10@email.com",
       "telefones": "telefones10",
       "endereco": "endereco10",
       "disciplinasLecionadas": "disciplinas10"
     },
     {
-      "codigo": 10,
+      "id": 10,
       "ra": "P1111111111",
       "nome": "Professor11",
-      "email": "email11",
+      "email": "email11@email.com",
       "telefones": "telefones11",
       "endereco": "endereco11",
       "disciplinasLecionadas": "disciplinas11"
     },
     {
-      "codigo": 11,
+      "id": 11,
       "ra": "P1212121212",
       "nome": "Professor12",
-      "email": "email12",
+      "email": "email12@email.com",
       "telefones": "telefones12",
       "endereco": "endereco12",
       "disciplinasLecionadas": "disciplinas12"
+    },
+    {
+      "id": 12,
+      "ra": "A123123123",
+      "nome": "notRegistredUser123",
+      "email": "notRegistredUser123@email.com",
+      "usuario": "notRegistredUser123",
+      "senha": "notRegistredUser123"
     }
   ],
   "alunos": [
     {
-      "codigo": 0,
+      "id": 0,
       "ra": "A11111",
       "nome": "Alexander Pierce",
-      "email": "email1",
+      "email": "email1@email.com",
       "telefones": "telefones1",
       "endereco": "endereco1",
       "disciplinasCursadas": "disciplinas1"
     },
     {
-      "codigo": 1,
+      "id": 1,
       "ra": "A22222",
       "nome": "Breno Petruquio",
-      "email": "email2",
+      "email": "email2@email.com",
       "telefones": "telefones2",
       "endereco": "endereco2",
       "disciplinasCursadas": "disciplinas2"
     },
     {
-      "codigo": 2,
+      "id": 2,
       "ra": "A33333",
       "nome": "Elizabeth Pierce",
-      "email": "email3",
+      "email": "email3@email.com",
       "telefones": "telefones3",
       "endereco": "endereco3",
       "disciplinasCursadas": "disciplinas3"
     },
     {
-      "codigo": 3,
+      "id": 3,
       "ra": "A44444",
       "nome": "Marie Claire",
-      "email": "email4",
+      "email": "email4@email.com",
       "telefones": "telefones4",
       "endereco": "endereco4",
       "disciplinasCursadas": "disciplinas4"
     },
     {
-      "codigo": 4,
+      "id": 4,
       "ra": "A55555",
       "nome": "Monique Silva",
-      "email": "email5",
+      "email": "email5@email.com",
       "telefones": "telefones5",
       "endereco": "endereco5",
       "disciplinasCursadas": "disciplinas5"
     },
     {
-      "codigo": 5,
+      "id": 5,
       "ra": "A66666",
       "nome": "Ernest Bob",
-      "email": "email6",
+      "email": "email6@email.com",
       "telefones": "telefones6",
       "endereco": "endereco6",
       "disciplinasCursadas": "disciplinas6"
     },
     {
-      "codigo": 6,
+      "id": 6,
       "ra": "A77777",
       "nome": "Raquel Reis",
-      "email": "email7",
+      "email": "email7@email.com",
       "telefones": "telefones7",
       "endereco": "endereco7",
       "disciplinasCursadas": "disciplinas7"
     },
     {
-      "codigo": 7,
+      "id": 7,
       "ra": "A88888",
       "nome": "Michele Lara",
-      "email": "email8",
+      "email": "email8@email.com",
       "telefones": "telefones8",
       "endereco": "endereco8",
       "disciplinasCursadas": "disciplinas8"
     },
     {
-      "codigo": 8,
+      "id": 8,
       "ra": "A99999",
       "nome": "Miag Toledo",
-      "email": "email9",
+      "email": "email9@email.com",
       "telefones": "telefones9",
       "endereco": "endereco9",
       "disciplinasCursadas": "disciplinas9"
     },
     {
-      "codigo": 9,
+      "id": 9,
       "ra": "A1010101010",
       "nome": "Miguel Toledo",
-      "email": "Turno10",
+      "email": "Turno10@email.com",
       "telefones": "telefones10",
       "endereco": "endereco10",
       "disciplinasCursadas": "disciplinas10"
     },
     {
-      "codigo": 10,
+      "id": 10,
       "ra": "A1111111111",
       "nome": "Daniel Moura",
-      "email": "email11",
+      "email": "email11@email.com",
       "telefones": "telefones11",
       "endereco": "endereco11",
       "disciplinasCursadas": "disciplinas11"
     },
     {
-      "codigo": 11,
+      "id": 11,
       "ra": "A1212121212",
       "nome": "Ricardo Silva",
-      "email": "email12",
+      "email": "email12@email.com",
       "telefones": "telefones12",
       "endereco": "endereco12",
       "disciplinasCursadas": "disciplinas12"
+    },
+    {
+      "id": 12,
+      "ra": "A321321321",
+      "nome": "notRegistredUser321",
+      "email": "notRegistredUser321@email.com",
+      "usuario": "notRegistredUser321",
+      "senha": "notRegistredUser321"
     }
   ],
   "usuarios": [
     {
-      "codigo": 0,
+      "id": 0,
       "ra": "I00000",
       "nome": "Instituição",
-      "email": "email0",
+      "email": "email0@email.com",
       "usuario": "instituicao",
       "senha": "instituicao"
     },
     {
-      "codigo": 1,
+      "id": 1,
       "ra": "P11111",
       "nome": "Professor1",
-      "email": "email1",
+      "email": "email1@email.com",
       "usuario": "professor1",
       "senha": "professor1"
     },
     {
-      "codigo": 2,
+      "id": 2,
       "ra": "P22222",
       "nome": "Professor2",
-      "email": "email2",
+      "email": "email2@email.com",
       "usuario": "professor2",
       "senha": "professor2"
     },
     {
-      "codigo": 3,
+      "id": 3,
       "ra": "P33333",
       "nome": "Professor3",
-      "email": "email3",
+      "email": "email3@email.com",
       "usuario": "professor3",
       "senha": "professor3"
     },
     {
-      "codigo": 4,
+      "id": 4,
       "ra": "P44444",
       "nome": "Professor4",
-      "email": "email4",
+      "email": "email4@email.com",
       "usuario": "professor4",
       "senha": "professor4"
     },
     {
-      "codigo": 5,
+      "id": 5,
       "ra": "P55555",
       "nome": "Professor5",
-      "email": "email5",
+      "email": "email5@email.com",
       "usuario": "professor5",
       "senha": "professor5"
     },
     {
-      "codigo": 6,
+      "id": 6,
       "ra": "P66666",
       "nome": "Professor6",
-      "email": "email6",
+      "email": "email6@email.com",
       "usuario": "professor6",
       "senha": "professor6"
     },
     {
-      "codigo": 7,
+      "id": 7,
       "ra": "P77777",
       "nome": "Professor7",
-      "email": "email7",
+      "email": "email7@email.com",
       "usuario": "professor7",
       "senha": "professor7"
     },
     {
-      "codigo": 8,
+      "id": 8,
       "ra": "P88888",
       "nome": "Professor8",
-      "email": "email8",
+      "email": "email8@email.com",
       "usuario": "professor8",
       "senha": "professor8"
     },
     {
-      "codigo": 9,
+      "id": 9,
       "ra": "P99999",
       "nome": "Professor9",
-      "email": "email9",
+      "email": "email9@email.com",
       "usuario": "professor9",
       "senha": "professor9"
     },
     {
-      "codigo": 10,
+      "id": 10,
       "ra": "P1010101010",
       "nome": "Professor10",
-      "email": "email10",
+      "email": "email10@email.com",
       "usuario": "professor10",
       "senha": "professor10"
     },
     {
-      "codigo": 11,
+      "id": 11,
       "ra": "P1111111111",
       "nome": "Professor11",
-      "email": "email11",
+      "email": "email11@email.com",
       "usuario": "professor11",
       "senha": "professor11"
     },
     {
-      "codigo": 12,
+      "id": 12,
       "ra": "P1212121212",
       "nome": "Professor12",
-      "email": "email12",
+      "email": "email12@email.com",
       "usuario": "professor12",
       "senha": "professor12"
     },
     {
-      "codigo": 13,
+      "id": 13,
       "ra": "A11111",
       "nome": "Alexander Pierce",
-      "email": "email1",
+      "email": "email1@email.com",
       "usuario": "aluno1",
       "senha": "aluno1"
     },
     {
-      "codigo": 14,
+      "id": 14,
       "ra": "A22222",
       "nome": "Breno Petruquio",
-      "email": "email2",
+      "email": "email2@email.com",
       "usuario": "aluno2",
       "senha": "aluno2"
     },
     {
-      "codigo": 15,
+      "id": 15,
       "ra": "A33333",
       "nome": "Elizabeth Pierce",
-      "email": "email2",
+      "email": "email2@email.com",
       "usuario": "aluno3",
       "senha": "aluno3"
     },
     {
-      "codigo": 16,
+      "id": 16,
       "ra": "A44444",
       "nome": "Marie Claire",
-      "email": "email4",
+      "email": "email4@email.com",
       "usuario": "aluno4",
       "senha": "aluno4"
     },
     {
-      "codigo": 17,
+      "id": 17,
       "ra": "A55555",
       "nome": "Monique Silva",
-      "email": "email5",
+      "email": "email5@email.com",
       "usuario": "aluno5",
       "senha": "aluno5"
     },
     {
-      "codigo": 18,
+      "id": 18,
       "ra": "A66666",
       "nome": "Ernest Bob",
-      "email": "email6",
+      "email": "email6@email.com",
       "usuario": "aluno6",
       "senha": "aluno6"
     },
     {
-      "codigo": 19,
+      "id": 19,
       "ra": "A77777",
       "nome": "Raquel Reis",
-      "email": "email7",
+      "email": "email7@email.com",
       "usuario": "aluno7",
       "senha": "aluno7"
     },
     {
-      "codigo": 20,
+      "id": 20,
       "ra": "A88888",
       "nome": "Michele Lara",
-      "email": "email8",
+      "email": "email8@email.com",
       "usuario": "aluno8",
       "senha": "aluno8"
     },
     {
-      "codigo": 21,
+      "id": 21,
       "ra": "A99999",
       "nome": "Miag Toledo",
       "email": "email9",
@@ -481,26 +497,26 @@
       "senha": "aluno9"
     },
     {
-      "codigo": 22,
+      "id": 22,
       "ra": "A1010101010",
       "nome": "Miguel Toledo",
-      "email": "Turno10",
+      "email": "email10@email.com",
       "usuario": "aluno10",
       "senha": "aluno10"
     },
     {
-      "codigo": 23,
+      "id": 23,
       "ra": "A1111111111",
       "nome": "Daniel Moura",
-      "email": "email11",
+      "email": "email11@email.com",
       "usuario": "aluno11",
       "senha": "aluno11"
     },
     {
-      "codigo": 24,
+      "id": 24,
       "ra": "A1212121212",
       "nome": "Ricardo Silva",
-      "email": "email12",
+      "email": "email12@email.com",
       "usuario": "aluno12",
       "senha": "aluno12"
     }

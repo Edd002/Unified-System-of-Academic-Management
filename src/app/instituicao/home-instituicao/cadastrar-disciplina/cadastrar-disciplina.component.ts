@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {Disciplina} from './disciplina.model';
 import { FACELIST_API } from 'src/app/app.api';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient } from '@angular/common/http'
 
+=======
+>>>>>>> 7f4613357723c5b60781d79520b4e7b88bd6c5e7
 
 @Component({
   selector: 'usam-cadastrar-disciplina',
@@ -13,6 +16,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class CadastrarDisciplinaComponent implements OnInit {
 
+<<<<<<< HEAD
   CadastroDisiciplinaForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder,private http:HttpClient) {
@@ -22,10 +26,14 @@ export class CadastrarDisciplinaComponent implements OnInit {
       cursos_disciplina: ['', Validators.required]
     });
    }
+=======
+  constructor() { }
+>>>>>>> 7f4613357723c5b60781d79520b4e7b88bd6c5e7
 
   ngOnInit() {
   }
 
+<<<<<<< HEAD
 
   salvarDisciplina() {
     let disciplina: Disciplina = {
@@ -45,4 +53,6 @@ export class CadastrarDisciplinaComponent implements OnInit {
 
   
 
+=======
+>>>>>>> 7f4613357723c5b60781d79520b4e7b88bd6c5e7
 }

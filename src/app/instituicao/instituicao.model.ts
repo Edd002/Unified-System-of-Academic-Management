@@ -1,5 +1,8 @@
 export interface Instituicao {
-    codigo: number;
-    usuario: string;
-    senha: string;
+    id: number;
+    ra: string;
+    nome: string;
+    email: string;
+    telefones: string;
+    endereco: string;
 }
