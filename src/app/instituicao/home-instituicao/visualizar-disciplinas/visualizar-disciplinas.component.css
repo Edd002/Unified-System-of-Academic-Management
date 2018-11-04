@@ -4,9 +4,9 @@ td, th {
 }
 
 td button {
-    display: block !important;
+    
     margin: auto !important;
-    max-width: 100px !important;
+    max-width: 250px !important;
 }
 
 div {

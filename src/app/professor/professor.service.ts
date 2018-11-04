@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class ProfessorService {
 
     constructor(private http: HttpClient) { }
@@ -21,7 +23,11 @@ export class ProfessorService {
         return this.http.get<Professor>(`${FACELIST_API}/professores?ra=${ra}`);
     }
 
-    getProfessorById(id: number): Observable<Professor> {
-        return this.http.get<Professor>(`${FACELIST_API}/professores?id=${id}`);
+    getProfessorByCodigo(codigo: number): Observable<Professor> {
+        return this.http.get<Professor>(`${FACELIST_API}/professores?codigo=${codigo}`);
+    }
+
+    registraProfessor(professor: Professor): Observable<Professor> {
+        return this.http.post<Professor>(`${FACELIST_API}/professores`, professor);
     }
 }

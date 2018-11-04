@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import {Disciplina} from './disciplina.model';
-import { FACELIST_API } from 'src/app/app.api';
-import { Observable } from 'rxjs/internal/Observable';
-import { HttpClient } from '@angular/common/http'
-
-=======
->>>>>>> 7f4613357723c5b60781d79520b4e7b88bd6c5e7
+import {Disciplina} from '../../../disciplina/disciplina.model'
+import {DisciplinaService} from '../../../disciplina/disciplina.service';
 
 @Component({
   selector: 'usam-cadastrar-disciplina',
@@ -16,43 +10,36 @@ import { HttpClient } from '@angular/common/http'
 })
 export class CadastrarDisciplinaComponent implements OnInit {
 
-<<<<<<< HEAD
   CadastroDisiciplinaForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,private http:HttpClient) {
+  constructor(private formBuilder: FormBuilder,private serviceDisciplina:DisciplinaService) {
     this.CadastroDisiciplinaForm = this.formBuilder.group({
-      nome_disciplina: ['', Validators.required],
+      nome_disciplina: [{ value: null, disabled: false }, [Validators.required]],
       turno_disciplina: ['', Validators.required],
-      cursos_disciplina: ['', Validators.required]
+      curso_disciplina: ['', Validators.required]
     });
-   }
-=======
-  constructor() { }
->>>>>>> 7f4613357723c5b60781d79520b4e7b88bd6c5e7
+  }
 
   ngOnInit() {
   }
-
-<<<<<<< HEAD
-
-  salvarDisciplina() {
+  
+  salvarDisciplina(){
     let disciplina: Disciplina = {
-      "codigo": null,
-      "nome": this.CadastroDisiciplinaForm.controls.nome_disciplina.value,
-      "turnos": this.CadastroDisiciplinaForm.controls.turno_disciplina.value,
-      "cursos": this.CadastroDisiciplinaForm.controls.cursos_disciplina.value
+      "id": null,
+      "nome_disciplina": this.CadastroDisiciplinaForm.controls.nome_disciplina.value,
+      "turno_disciplina": this.CadastroDisiciplinaForm.controls.turno_disciplina.value,
+      "cursos_disciplina": this.CadastroDisiciplinaForm.controls.curso_disciplina.value,
     }
-      //console.log(disciplina);  
-    this.registrarDisciplina(disciplina);
-  }
-  
-  registrarDisciplina(disciplina:Disciplina):Observable<Disciplina>{
-    console.log(disciplina);  
-    return this.http.post<Disciplina>(`${FACELIST_API}/disciplinas`,disciplina);
+    this.serviceDisciplina.registraDisciplina(disciplina).subscribe(
+      data =>{
+        console.log(data);
+        alert("Disciplina Salva Com Sucesso !");
+      },
+      err =>{
+        alert("Erro Ao Salvar ,  Veja o Console para detalhes !");
+        console.log('Erro Gerado: '+JSON.stringify(err));
+      }
+    );
   }
 
-  
-
-=======
->>>>>>> 7f4613357723c5b60781d79520b4e7b88bd6c5e7
 }
