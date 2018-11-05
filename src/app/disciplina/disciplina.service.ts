@@ -4,9 +4,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class DisciplinaService {
 
     constructor(private http: HttpClient) { }
@@ -16,11 +14,11 @@ export class DisciplinaService {
     }
 
     getAllDisciplinasBySearch(query: string): Observable<Disciplina[]> {
-        return this.http.get<Disciplina[]>(`${FACELIST_API}/disciplinas?nome_like=${query}`);
+        return this.http.get<Disciplina[]>(`${FACELIST_API}/disciplinas?nome_disciplina_like=${query}`);
     }
 
-    getDisciplinaByCodigo(codigo: number): Observable<Disciplina> {
-        return this.http.get<Disciplina>(`${FACELIST_API}/disciplinas/${codigo}`);
+    getDisciplinaById(id: number): Observable<Disciplina> {
+        return this.http.get<Disciplina>(`${FACELIST_API}/disciplinas/${id}`);
     }
 
     registraDisciplina(disciplina: Disciplina): Observable<Disciplina> {

@@ -14,15 +14,15 @@ export class AlunoService {
     }
 
     getAllAlunosBySearch(query: string): Observable<Aluno[]> {
-        return this.http.get<Aluno[]>(`${FACELIST_API}/alunos?nome_like=${query}`);
+        return this.http.get<Aluno[]>(`${FACELIST_API}/alunos?nome_aluno_like=${query}`);
     }
 
     getAlunoByRA(ra: string): Observable<Aluno> {
-        return this.http.get<Aluno>(`${FACELIST_API}/alunos?ra=${ra}`);
+        return this.http.get<Aluno>(`${FACELIST_API}/alunos?ra_aluno=${ra}`);
     }
 
-    getAlunoByCodigo(codigo: number): Observable<Aluno> {
-        return this.http.get<Aluno>(`${FACELIST_API}/alunos?codigo=${codigo}`);
+    getAlunoById(id: number): Observable<Aluno> {
+        return this.http.get<Aluno>(`${FACELIST_API}/alunos?id=${id}`);
     }
 
     registraAluno(aluno: Aluno): Observable<Aluno> {

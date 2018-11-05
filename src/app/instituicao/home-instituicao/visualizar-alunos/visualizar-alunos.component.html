@@ -37,22 +37,28 @@
                 <th rowspan="1" colspan="1">Registro Acadêmico</th>
                 <th rowspan="1" colspan="1">Nome</th>
                 <th rowspan="1" colspan="1">E-mail</th>
-                <th rowspan="1" colspan="1">Telefones</th>
+                <!--
+                <th rowspan="1" colspan="1">Telefone 1</th>
+                <th rowspan="1" colspan="1">Telefone 2</th>
                 <th rowspan="1" colspan="1">Endereços</th>
+                -->
                 <th rowspan="1" colspan="1">Disciplinas Cursadas</th>
                 <th rowspan="1" colspan="1">Remover</th>
               </tr>
             </thead>
             <tbody>
               <tr role="row" class="odd" *ngFor="let aluno of listAlunos">
-                <td>{{aluno?.ra}}</td>
-                <td>{{aluno?.nome}}</td>
-                <td>{{aluno?.email}}</td>
-                <td>{{aluno?.telefones}}</td>
-                <td>{{aluno?.endereco}}</td>
-                <td>{{aluno?.disciplinasCursadas}}</td>
+                <td>{{aluno?.ra_aluno}}</td>
+                <td>{{aluno?.nome_aluno}}</td>
+                <td>{{aluno?.email_aluno}}</td>
+                <!--
+                <td>{{aluno?.telefone1_aluno}}</td>
+                <td>{{aluno?.telefone2_aluno}}</td>
+                <td>{{aluno?.endereco_aluno}}</td>
+                -->
+                <td>{{aluno?.disciplinasCursadas_aluno}}</td>
                 <td>
-                  <button type="button" class="btn btn-block btn-danger"><i class="fa fa-trash"></i>  Remover</button>
+                  <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Remover</button>
                 </td>
               </tr>
             </tbody>
@@ -61,8 +67,11 @@
                 <th rowspan="1" colspan="1">Registro Acadêmico</th>
                 <th rowspan="1" colspan="1">Nome</th>
                 <th rowspan="1" colspan="1">E-mail</th>
-                <th rowspan="1" colspan="1">Telefones</th>
+                <!--
+                <th rowspan="1" colspan="1">Telefone 1</th>
+                <th rowspan="1" colspan="1">Telefone 2</th>
                 <th rowspan="1" colspan="1">Endereços</th>
+                -->
                 <th rowspan="1" colspan="1">Disciplinas Cursadas</th>
                 <th rowspan="1" colspan="1">Remover</th>
               </tr>

@@ -37,17 +37,16 @@
                 <th rowspan="1" colspan="1">Nome</th>
                 <th rowspan="1" colspan="1">Turnos</th>
                 <th rowspan="1" colspan="1">Cursos</th>
-                <th rowspan="1" colspan="1">Remover/ Opções</th>
+                <th rowspan="1" colspan="1">Remover</th>
               </tr>
             </thead>
             <tbody>
               <tr role="row" class="odd" *ngFor="let disciplina of listDisciplinas">
-                <td>{{disciplina?.nome}}</td>
-                <td>{{disciplina?.turno}}</td>
-                <td>{{disciplina?.cursos}}</td>
+                <td>{{disciplina?.nome_disciplina}}</td>
+                <td>{{disciplina?.turno_disciplina}}</td>
+                <td>{{disciplina?.cursos_disciplina}}</td>
                 <td>
-                  <button type="button" class="btn  btn-danger"><i class="fa fa-trash"></i>  Remover</button>
-                  <button type="button" class="btn  btn-info"><i class="fa fa-search"></i>  Detalhes</button>
+                  <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Remover</button>
                 </td>
               </tr>
             </tbody>

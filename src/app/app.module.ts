@@ -45,8 +45,9 @@ import { InstituicaoService } from './instituicao/instituicao.service';
 import { DisciplinaService } from './disciplina/disciplina.service';
 import { ProfessorService } from './professor/professor.service';
 import { AlunoService } from './aluno/aluno.service';
-import { UsuarioService } from './shared/usuario/usuario.service';
-import { AuthenticatorService } from './shared/usuario/authenticator.service';
+import { SituacaoService } from './situacao/situacao.service';
+import { UsuarioService } from './usuario/usuario.service';
+import { AuthenticatorService } from './usuario/authenticator.service';
 
 @NgModule({
   declarations: [
@@ -98,6 +99,7 @@ import { AuthenticatorService } from './shared/usuario/authenticator.service';
     DisciplinaService,
     ProfessorService,
     AlunoService,
+    SituacaoService,
     UsuarioService,
     AuthenticatorService
   ],

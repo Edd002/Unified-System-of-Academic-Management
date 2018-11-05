@@ -5,6 +5,6 @@ export interface Aluno {
     email_aluno: string;
     telefone1_aluno: string;
     telefone2_aluno: string;
-    usuario_aluno: string;
-    senha_aluno: string;
+    endereco_aluno: string;
+    disciplinasCursadas_aluno: string;
 }

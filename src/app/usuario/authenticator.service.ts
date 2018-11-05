@@ -16,18 +16,18 @@ export class AuthenticatorService {
     }
 
     public get getCurrentUser(): Usuario {
-        this.currentUser.senha = null;
+        this.currentUser.senha_usuario = null;
         return this.currentUser;
     }
 
     private startUser() {
         this.currentUser = {
             id: null,
-            ra: null,
-            nome: "Usuário Convidado",
-            email: null,
-            usuario: null,
-            senha: null
+            ra_usuario: null,
+            nome_usuario: "Usuário Convidado",
+            email_usuario: null,
+            usuario_usuario: null,
+            senha_usuario: null
         }
     }
 
@@ -39,7 +39,7 @@ export class AuthenticatorService {
         this.registerPOST(usuario).subscribe(
             data => {
                 this.currentUser = data;
-                this.currentUser.senha = null;
+                this.currentUser.senha_usuario = null;
                 sessionStorage.setItem('u', JSON.stringify(this.currentUser));
 
                 alert('Usuário registrado.');

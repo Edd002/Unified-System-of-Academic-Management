@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
-import { Usuario } from '../usuario/usuario.model';
+import { Usuario } from '../../usuario/usuario.model';
 import { Professor } from '../../professor/professor.model';
 import { Aluno } from '../../aluno/aluno.model';
-import { UsuarioService } from '../usuario/usuario.service';
-import { AuthenticatorService } from '../usuario/authenticator.service';
+import { UsuarioService } from '../../usuario/usuario.service';
+import { AuthenticatorService } from '../../usuario/authenticator.service';
 import { ProfessorService } from '../../professor/professor.service';
 import { AlunoService } from '../../aluno/aluno.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'usam-register',
@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
   formGroupRegisterReadOnly: boolean;
   raRegistred: boolean;
 
-  constructor(private formBuilderRegister: FormBuilder, private professorService: ProfessorService, private alunoService: AlunoService, private usuarioService: UsuarioService, private authenticatorService: AuthenticatorService) {
+  constructor(private formBuilderRegister: FormBuilder, private professorService: ProfessorService, private alunoService: AlunoService, private usuarioService: UsuarioService, private authenticatorService: AuthenticatorService, private router: Router) {
     this.formGroupRegister = this.formBuilderRegister.group({
       registroAcademico: [{ value: null, disabled: false }, [Validators.required]],
       nome: [{ value: null, disabled: false }, [Validators.required]],
@@ -27,12 +27,24 @@ export class RegisterComponent implements OnInit {
       usuario: [{ value: null, disabled: false }, [Validators.required, Validators.minLength(6), Validators.maxLength(12)]],
       senha: [{ value: null, disabled: false }, [Validators.required, Validators.minLength(7), Validators.maxLength(21)]],
       confirmarSenha: [{ value: null, disabled: false }, [Validators.required, Validators.minLength(7), Validators.maxLength(21)]]
-    });
+    }, {
+        validator: this.confirmarSenhaValidator
+      });
+  }
+
+  confirmarSenhaValidator(abastractControl: AbstractControl) {
+    let senha = abastractControl.get('senha').value;
+    let confirmarSenha = abastractControl.get('confirmarSenha').value;
+
+    if (senha != confirmarSenha)
+      abastractControl.get('confirmarSenha').setErrors({ MatchPassword: true })
+    else
+      return null
   }
 
   ngOnInit() {
-    this.raRegistred = false;
     this.formGroupRegisterReadOnly = true;
+    this.raRegistred = false;
   }
 
   private get ra(): string { return this.formGroupRegister.controls.registroAcademico.value; }
@@ -84,8 +96,9 @@ export class RegisterComponent implements OnInit {
                       this.formGroupRegister.controls.senha.markAsTouched();
                       this.formGroupRegister.controls.confirmarSenha.markAsTouched();
 
-                      this.nome = aluno[0].nome;
-                      this.email = aluno[0].email;
+                      console.log(aluno[0]);
+                      this.nome = aluno[0].nome_aluno;
+                      this.email = aluno[0].email_aluno;
                       this.formGroupRegisterReadOnly = false;
                     }
                   }
@@ -96,8 +109,8 @@ export class RegisterComponent implements OnInit {
                 this.formGroupRegister.controls.senha.markAsTouched();
                 this.formGroupRegister.controls.confirmarSenha.markAsTouched();
 
-                this.nome = professor[0].nome;
-                this.email = professor[0].email;
+                this.nome = professor[0].nome_professor;
+                this.email = professor[0].email_professor;
                 this.formGroupRegisterReadOnly = false;
               }
             }
@@ -111,18 +124,22 @@ export class RegisterComponent implements OnInit {
   }
 
   submit() {
-    if (this.senha !== this.confirmarSenha) {
-      alert('Senha e confirmar senha diferentes.');
-    } else {
-      let usuarioRegister: Usuario = {
-        "id": null,
-        "ra": this.ra,
-        "nome": this.nome,
-        "email": this.email,
-        "usuario": this.usuario,
-        "senha": this.senha
-      }
-      //this.authenticatorService.register(usuarioRegister);
+    let usuarioRegister: Usuario = {
+      "id": null,
+      "ra_usuario": this.ra,
+      "nome_usuario": this.nome,
+      "email_usuario": this.email,
+      "usuario_usuario": this.usuario,
+      "senha_usuario": this.senha
     }
+
+    this.authenticatorService.register(usuarioRegister);
+    this.sucessRegistration();
+  }
+
+  sucessRegistration() {
+    this.formGroupRegister.reset();
+    alert("Usuário registrado.");
+    this.router.navigate(['/login']);
   }
 }

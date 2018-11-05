@@ -3,8 +3,8 @@ export interface Professor {
     ra_professor: string;
     nome_professor: string;
     email_professor: string;
-    telefone1_professor:string;
-    telefone2_professor:string;
-    usuario_professor: string;
-    senha_professor: string;
+    telefone1_professor: string;
+    telefone2_professor: string;
+    endereco_professor: string;
+    disciplinasLecionadas_professor: string;
 }
