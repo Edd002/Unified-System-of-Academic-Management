@@ -37,7 +37,7 @@
                 <th rowspan="1" colspan="1">Nome</th>
                 <th rowspan="1" colspan="1">Turnos</th>
                 <th rowspan="1" colspan="1">Cursos</th>
-                <th rowspan="1" colspan="1">Remover</th>
+                <th rowspan="1" colspan="1" class="th-table-opcoes">Opções</th>
               </tr>
             </thead>
             <tbody>
@@ -46,7 +46,9 @@
                 <td>{{disciplina?.turno_disciplina}}</td>
                 <td>{{disciplina?.cursos_disciplina}}</td>
                 <td>
-                  <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Remover</button>
+                  <button type="button" class="btn btn-info" (click)="alterarDisciplina(disciplina?.id)"><i class="fa fa-edit"></i> Editar</button>
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" value="{{disciplina?.id}}" (click)="id(disciplina?.id)">
+                    <i class="fa fa-trash"></i> Remover</button>
                 </td>
               </tr>
             </tbody>
@@ -55,7 +57,7 @@
                 <th rowspan="1" colspan="1">Nome</th>
                 <th rowspan="1" colspan="1">Turnos</th>
                 <th rowspan="1" colspan="1">Cursos</th>
-                <th rowspan="1" colspan="1">Remover</th>
+                <th rowspan="1" colspan="1">Opções</th>
               </tr>
             </tfoot>
           </table>
@@ -66,3 +68,18 @@
   <!-- /.box-body -->
 </div>
 <!-- /.box -->
+
+<div id="myModal" class="modal fade" data-backdrop="false" role="dialog">
+  <div class="modal-dialog modal-sm text-center">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Deseja Realmente Excluir</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="idDisciplina" (click)="deleteDisciplina()"><i class="fa fa-trash"></i>  SIM</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal"> <i class="fa fa-remove"></i>  NÃO</button>
+      </div>
+    </div>
+
+  </div>
+</div>

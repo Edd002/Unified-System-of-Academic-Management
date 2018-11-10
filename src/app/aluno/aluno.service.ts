@@ -29,4 +29,8 @@ export class AlunoService {
         return this.http.post<Aluno>(`${FACELIST_API}/alunos`, aluno);
     }
 
+    deleteAluno(id:number): Observable<Aluno> {
+        return this.http.delete<Aluno>(`${FACELIST_API}/alunos/${id}`);
+    }
+
 }

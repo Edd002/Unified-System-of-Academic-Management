@@ -8,6 +8,8 @@ import { ProfessorService } from '../../../professor/professor.service';
   styleUrls: ['./visualizar-professores.component.css']
 })
 export class VisualizarProfessoresComponent implements OnInit {
+  
+  idProfessor: number;
 
   constructor(private professorService: ProfessorService) { }
 
@@ -29,4 +31,25 @@ export class VisualizarProfessoresComponent implements OnInit {
       data => this.listProfessores = data
     );
   }
+
+  deleteProfessor(){
+
+    console.log(this.idProfessor);
+    this.professorService.deleteProfessor(this.idProfessor).subscribe(
+      data =>{
+        console.log(data);
+      },
+      err =>{
+        console.log('Erro Gerado: '+JSON.stringify(err));
+        alert("Erro Ao EXCLUIR ,  Veja o Console para detalhes !");
+      },
+      ()=> {
+        //alert('SUCESSO');
+        this.loadProfessores();
+      }
+    );
+
+  }
+
+  private id(id: number) { this.idProfessor = id; }
 }

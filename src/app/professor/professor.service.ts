@@ -28,4 +28,8 @@ export class ProfessorService {
     registraProfessor(professor: Professor): Observable<Professor> {
         return this.http.post<Professor>(`${FACELIST_API}/professores`, professor);
     }
+
+    deleteProfessor(id:number): Observable<Professor> {
+        return this.http.delete<Professor>(`${FACELIST_API}/professores/${id}`);
+    }
 }

@@ -4,9 +4,7 @@ td, th {
 }
 
 td button {
-    
-    margin: auto !important;
-    max-width: 250px !important;
+    width: 50%;
 }
 
 div {
@@ -14,3 +12,15 @@ div {
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
 }
+.th-table-opcoes{
+    width: 25%;
+}
+
+.modal-backdrop {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background-color: #000000 !important;
+  }

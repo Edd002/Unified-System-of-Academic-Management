@@ -24,4 +24,12 @@ export class DisciplinaService {
     registraDisciplina(disciplina: Disciplina): Observable<Disciplina> {
         return this.http.post<Disciplina>(`${FACELIST_API}/disciplinas`, disciplina);
     }
+
+    deleteDisciplina(id:number): Observable<Disciplina> {
+        return this.http.delete<Disciplina>(`${FACELIST_API}/disciplinas/${id}`);
+    }
+
+    alterarDisciplina(disciplina: Disciplina): Observable<Disciplina> {
+        return this.http.put<Disciplina>(`${FACELIST_API}/disciplinas/${disciplina.id}`,disciplina);
+    }
 }

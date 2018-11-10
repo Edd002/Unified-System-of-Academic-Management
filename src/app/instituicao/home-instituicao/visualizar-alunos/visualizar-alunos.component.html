@@ -58,7 +58,9 @@
                 -->
                 <td>{{aluno?.disciplinasCursadas_aluno}}</td>
                 <td>
-                  <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Remover</button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" value="{{aluno?.id}}"
+                    (click)="id(aluno?.id)">
+                    <i class="fa fa-trash"></i> Remover</button>
                 </td>
               </tr>
             </tbody>
@@ -84,3 +86,20 @@
   <!-- /.box-body -->
 </div>
 <!-- /.box -->
+
+
+<div id="myModal" class="modal fade" data-backdrop="false" role="dialog">
+    <div class="modal-dialog modal-sm text-center">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Deseja Realmente Excluir o Professor </h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal" (click)="deleteAluno()"><i
+              class="fa fa-trash"></i> SIM</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal"> <i class="fa fa-remove"></i> NÃO</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>

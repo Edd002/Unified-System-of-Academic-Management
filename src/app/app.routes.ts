@@ -35,7 +35,11 @@ export const ROUTES: Routes = [
             { path: 'cadastrar-disciplina', component: CadastrarDisciplinaComponent },
             { path: 'cadastrar-professor', component: CadastrarProfessorComponent },
             { path: 'cadastrar-aluno', component: CadastrarAlunoComponent },
-            { path: 'alterar-disciplina', component: AlterarDisciplinaComponent },
+
+
+            { path: 'alterar-disciplina/:disciplina[]', component: AlterarDisciplinaComponent },
+
+            
             { path: 'alterar-professor', component: AlterarProfessorComponent },
             { path: 'alterar-aluno', component: AlterarAlunoComponent },
             { path: 'visualizar-disciplinas', component: VisualizarDisciplinasComponent },
@@ -60,5 +64,5 @@ export const ROUTES: Routes = [
             { path: 'cronograma-academico', component: CronogramaAcademicoComponentAluno }
         ]
     },
-    { path: '**', redirectTo: 'login' }
+    //{ path: '**', redirectTo: 'login' }
 ]
