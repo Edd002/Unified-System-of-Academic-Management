@@ -12,12 +12,22 @@ export class VisualizarDisciplinasComponent implements OnInit {
 
   listDisciplinas: Disciplina[];
   query: string;
-  idDisciplina: number;
+
+  idDisciplinaDeletar: number;
+  disciplinaAlterar: Disciplina;
 
   constructor(private disciplinaService: DisciplinaService, private router: Router) { }
 
   ngOnInit() {
     this.loadDisciplinas();
+  }
+
+  ngOnDestroy() {
+    this.disciplinaService.disciplina = this.disciplinaAlterar;
+  }
+
+  setIdDisciplinaDeletar(idDisciplinaDeletar: number) {
+    this.idDisciplinaDeletar = idDisciplinaDeletar;
   }
 
   loadDisciplinas() {
@@ -32,40 +42,29 @@ export class VisualizarDisciplinasComponent implements OnInit {
     );
   }
 
- 
-  deleteDisciplina(){
-    //console.log(this.idDisciplina);
-    this.disciplinaService.deleteDisciplina(this.idDisciplina).subscribe(
-      data =>{
+  deletarDisciplina() {
+    this.disciplinaService.deleteDisciplina(this.idDisciplinaDeletar).subscribe(
+      data => {
         console.log(data);
       },
-      err =>{
-        console.log('Erro Gerado: '+JSON.stringify(err));
-        alert("Erro Ao EXCLUIR ,  Veja o Console para detalhes !");
+      err => {
+        console.log('Erro gerado: ' + JSON.stringify(err));
+        alert("Erro ao EXCLUIR, veja o console para detalhes.");
       },
-      ()=> {
-        //alert('SUCESSO');
+      () => {
         this.loadDisciplinas();
       }
     );
-
   }
 
-  private alterarDisciplina(id: number) {
-    let disciplina: Disciplina;
-    
+  alterarDisciplina(idDisciplina: number) {
     for (const disciplinaBuscada of this.listDisciplinas) {
-      if (disciplinaBuscada.id == id) {
-        disciplina = disciplinaBuscada;
+      if (disciplinaBuscada.id == idDisciplina) {
+        this.disciplinaAlterar = disciplinaBuscada;
         break;
       }
     }
-    
-    console.log(disciplina);
-    
-    this.router.navigate(['/instituicao/alterar-disciplina',disciplina]);
+
+    this.router.navigate(['/instituicao/alterar-disciplina']);
   }
-  
-  private id(id: number) {this.idDisciplina = id; }
-  
 }

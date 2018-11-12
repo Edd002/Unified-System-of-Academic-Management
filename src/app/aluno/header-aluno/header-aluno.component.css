@@ -5,3 +5,7 @@
 .main-header .logo .logo-mini {
     font-size: 75% !important;
 }
+
+.user-header {
+    height: 100% !important;
+}

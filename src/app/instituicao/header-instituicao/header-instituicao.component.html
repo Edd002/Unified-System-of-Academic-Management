@@ -19,12 +19,12 @@
 
     <div class="navbar-custom-menu">
       <ul class="nav navbar-nav">
-        
+
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown user user-menu">
           <a role="button" class="dropdown-toggle" data-toggle="dropdown">
             <img src="src/assets/img/photo1.png" class="user-image" alt="User Image">
-            <span class="hidden-xs">Instituição Acadêmica</span>
+            <span class="hidden-xs">{{authenticatorService.getCurrentUser.nome_usuario}}</span>
           </a>
           <ul class="dropdown-menu">
             <!-- User image -->
@@ -32,14 +32,17 @@
               <img src="src/assets/img/photo1.png" class="img-circle" alt="User Image">
 
               <p>
-                Instituição Acadêmica
-                <small>Fundada no segundo semestre de 2018</small>
+                {{authenticatorService.getCurrentUser?.nome_usuario}}
+              </p>
+              <p *ngIf="authenticatorService.getCurrentUser.id != null">
+                <small>Registro Acadêmico: {{authenticatorService?.getCurrentUser.ra_usuario}}</small>
+                <small>E-mail: {{authenticatorService.getCurrentUser?.email_usuario}}</small>
               </p>
             </li>
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="pull-right">
-                <a role="button" [routerLink]="['/login']" class="btn btn-primary btn-flat">Sair</a>
+                <a role="button" [routerLink]="['/login']" (click)="authenticatorService.logout()" class="btn btn-primary btn-flat">Sair</a>
               </div>
             </li>
           </ul>

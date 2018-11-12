@@ -7,10 +7,11 @@ import { Usuario } from './usuario.model';
 @Injectable()
 export class AuthenticatorService {
 
-    currentUser: Usuario;
+    public usuario: Usuario;
+    public currentUser: Usuario;
 
     constructor(private httpClient: HttpClient) {
-        this.currentUser = JSON.parse(localStorage.getItem('u'));
+        this.currentUser = JSON.parse(sessionStorage.getItem('u'));
         if (this.currentUser == null)
             this.startUser();
     }
@@ -20,7 +21,7 @@ export class AuthenticatorService {
         return this.currentUser;
     }
 
-    private startUser() {
+    startUser() {
         this.currentUser = {
             id: null,
             ra_usuario: null,
@@ -31,7 +32,7 @@ export class AuthenticatorService {
         }
     }
 
-    private registerPOST(usuario: Usuario): Observable<Usuario> {
+    registerPOST(usuario: Usuario): Observable<Usuario> {
         return this.httpClient.post<Usuario>(`${FACELIST_API}/usuarios`, usuario);
     }
 
@@ -57,5 +58,18 @@ export class AuthenticatorService {
     logout() {
         sessionStorage.removeItem('u');
         this.startUser();
+    }
+
+
+    getUsuarioByRA(ra: string): Observable<Usuario> {
+        return this.httpClient.get<Usuario>(`${FACELIST_API}/usuarios?ra_usuario=${ra}`);
+    }
+
+    getUsuarioByUsuario(usuario: string): Observable<Usuario> {
+        return this.httpClient.get<Usuario>(`${FACELIST_API}/usuarios?usuario_usuario=${usuario}`);
+    }
+
+    getUsuarioById(id: number): Observable<Usuario> {
+        return this.httpClient.get<Usuario>(`${FACELIST_API}/usuarios?id=${id}`);
     }
 }

@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class InstituicaoService {
 
+    public instituicao: Instituicao;
+
     constructor(private http: HttpClient) { }
 
 }

@@ -3,7 +3,6 @@ import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/fo
 import { Usuario } from '../../usuario/usuario.model';
 import { Professor } from '../../professor/professor.model';
 import { Aluno } from '../../aluno/aluno.model';
-import { UsuarioService } from '../../usuario/usuario.service';
 import { AuthenticatorService } from '../../usuario/authenticator.service';
 import { ProfessorService } from '../../professor/professor.service';
 import { AlunoService } from '../../aluno/aluno.service';
@@ -19,7 +18,7 @@ export class RegisterComponent implements OnInit {
   formGroupRegisterReadOnly: boolean;
   raRegistred: boolean;
 
-  constructor(private formBuilderRegister: FormBuilder, private professorService: ProfessorService, private alunoService: AlunoService, private usuarioService: UsuarioService, private authenticatorService: AuthenticatorService, private router: Router) {
+  constructor(private formBuilderRegister: FormBuilder, private professorService: ProfessorService, private alunoService: AlunoService, private authenticatorService: AuthenticatorService, private router: Router) {
     this.formGroupRegister = this.formBuilderRegister.group({
       registroAcademico: [{ value: null, disabled: false }, [Validators.required]],
       nome: [{ value: null, disabled: false }, [Validators.required]],
@@ -65,7 +64,7 @@ export class RegisterComponent implements OnInit {
     let aluno: Aluno;
     let usuarioRegistred: Usuario;
 
-    this.usuarioService.getUsuarioByRA(this.ra).subscribe(
+    this.authenticatorService.getUsuarioByRA(this.ra).subscribe(
       data => usuarioRegistred = data,
       err => { },
       () => {

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
+import { Usuario } from '../../usuario/usuario.model';
+import { AuthenticatorService } from '../../usuario/authenticator.service';
 
 @Component({
   selector: 'usam-login',
@@ -9,37 +11,51 @@ import { FormBuilder } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private router: Router, private formBuilder: FormBuilder, private authenticatorService: AuthenticatorService) { }
 
   ngOnInit() {
     onEnterKey();
   }
 
-  profileForm = this.formBuilder.group({
+  formGroupLogin = this.formBuilder.group({
     usuario: [''],
     senha: ['']
   });
 
-  rotaLogin: string;
   loginErro: boolean;
+  usuarioRegistred: Usuario
 
-  logar(usuario: string, senha: string): void {
-    if (usuario == "aluno" && senha == "aluno") {
-      this.rotaLogin = "/aluno";
-      this.loginErro = false;
-    } else if (usuario == "instituicao" && senha == "instituicao") {
-      this.rotaLogin = "/instituicao";
-      this.loginErro = false;
-    } else if (usuario == "professor" && senha == "professor") {
-      this.rotaLogin = "/professor";
-      this.loginErro = false;
-    } else {
-      this.rotaLogin = "/login";
-      this.loginErro = true;
-    }
+  private get usuario(): string { return this.formGroupLogin.controls.usuario.value; }
+  private get senha(): string { return this.formGroupLogin.controls.senha.value; }
 
-    this.router.navigate([this.rotaLogin]);
+  logar() {
+    this.authenticatorService.getUsuarioByUsuario(this.usuario).subscribe(
+      data => this.usuarioRegistred = data,
+      err => { },
+      () => {
+        if (this.usuarioRegistred == undefined || Object.keys(this.usuarioRegistred).length == 0) {
+          this.loginErro = true;
+          //console.log("Usuário não existe.");
+
+        } else {
+
+          if (this.usuarioRegistred[0].senha_usuario !== this.senha) {
+            this.loginErro = true;
+            //.log("Senha inválida.");
+
+          } else {
+            //console.log("Logado.");
+            this.authenticatorService.currentUser = this.usuarioRegistred;
+
+            // VERIFICAR A PRIMEIRA LETRA DO RA PARA DIRECIONAR PARA ÁREA CORRETA
+            this.router.navigate(['/instituicao']);
+          }
+
+        }
+      }
+    );
   }
+
 }
 
 

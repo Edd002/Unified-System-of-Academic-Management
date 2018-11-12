@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class DisciplinaService {
 
+    public disciplina: Disciplina;
+
     constructor(private http: HttpClient) { }
 
     getAllDisciplinas(): Observable<Disciplina[]> {

@@ -46,7 +46,6 @@ import { DisciplinaService } from './disciplina/disciplina.service';
 import { ProfessorService } from './professor/professor.service';
 import { AlunoService } from './aluno/aluno.service';
 import { SituacaoService } from './situacao/situacao.service';
-import { UsuarioService } from './usuario/usuario.service';
 import { AuthenticatorService } from './usuario/authenticator.service';
 
 @NgModule({
@@ -100,7 +99,6 @@ import { AuthenticatorService } from './usuario/authenticator.service';
     ProfessorService,
     AlunoService,
     SituacaoService,
-    UsuarioService,
     AuthenticatorService
   ],
   bootstrap: [AppComponent]
