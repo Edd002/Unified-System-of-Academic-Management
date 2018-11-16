@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Professor } from '../../../professor/professor.model';
 import { ProfessorService } from '../../../professor/professor.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'usam-visualizar-professores',
@@ -9,16 +10,25 @@ import { ProfessorService } from '../../../professor/professor.service';
 })
 export class VisualizarProfessoresComponent implements OnInit {
   
-  idProfessor: number;
+  listProfessores: Professor[];
+  query: string;
 
-  constructor(private professorService: ProfessorService) { }
+  idProfessor: number;
+  professorAlterar: Professor;
+
+  constructor(private professorService: ProfessorService, private router: Router) { }
 
   ngOnInit() {
     this.loadProfessores();
   }
 
-  listProfessores: Professor[];
-  query: string;
+  ngOnDestroy() {
+    this.professorService.professor = this.professorAlterar;
+  }
+  
+  setIdProfessorDeletar(idProfessor: number) {
+    this.idProfessor = idProfessor;
+  }
 
   loadProfessores() {
     this.professorService.getAllProfessores().subscribe(
@@ -32,8 +42,8 @@ export class VisualizarProfessoresComponent implements OnInit {
     );
   }
 
-  deleteProfessor(){
 
+  deleteProfessor(){
     console.log(this.idProfessor);
     this.professorService.deleteProfessor(this.idProfessor).subscribe(
       data =>{
@@ -52,4 +62,15 @@ export class VisualizarProfessoresComponent implements OnInit {
   }
 
   private id(id: number) { this.idProfessor = id; }
+
+
+  alterarProfessor(idProfessor: number) {
+    for (const professorBuscado of this.listProfessores) {
+      if (professorBuscado.id == idProfessor) {
+        this.professorAlterar = professorBuscado;
+        break;
+      }
+    }
+    this.router.navigate(['/instituicao/alterar-professor']);
+  }
 }

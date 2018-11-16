@@ -1,24 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { Aluno } from '../../../aluno/aluno.model';
 import { AlunoService } from '../../../aluno/aluno.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'usam-visualizar-alunos',
   templateUrl: './visualizar-alunos.component.html',
   styleUrls: ['./visualizar-alunos.component.css']
 })
+
 export class VisualizarAlunosComponent implements OnInit {
 
-  idAluno: number;
+  
+  listAlunos: Aluno[];
+  query: string;
 
-  constructor(private alunoService: AlunoService) { }
+  idAluno: number;
+  AlunoAlterar: Aluno;
+
+  constructor(private alunoService: AlunoService, private router: Router) { }
 
   ngOnInit() {
     this.loadAlunos();
   }
 
-  listAlunos: Aluno[];
-  query: string;
+  ngOnDestroy() {
+    this.alunoService.aluno = this.AlunoAlterar;
+  }
+  
+  setIdAlunoDeletar(idAluno: number) {
+    this.idAluno = idAluno;
+  }
 
   loadAlunos() {
     this.alunoService.getAllAlunos().subscribe(
@@ -53,4 +65,17 @@ export class VisualizarAlunosComponent implements OnInit {
   }
 
   private id(id: number) {this.idAluno = id; }
+
+
+  alterarAluno(idAluno: number) {
+    for (const AlunoaBuscado of this.listAlunos) {
+      if (AlunoaBuscado.id == idAluno) {
+        this.AlunoAlterar = AlunoaBuscado;
+        break;
+      }
+    }
+    console.log(this.AlunoAlterar);
+    
+    this.router.navigate(['/instituicao/alterar-aluno']);
+  }
 }

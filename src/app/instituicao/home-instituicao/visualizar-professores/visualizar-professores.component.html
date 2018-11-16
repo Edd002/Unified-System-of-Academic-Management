@@ -40,9 +40,12 @@
                 <!--
                 <th rowspan="1" colspan="1">Telefone 1</th>
                 <th rowspan="1" colspan="1">Telefone 2</th>
-                <th rowspan="1" colspan="1">Endereço</th>
                 -->
+                <th rowspan="1" colspan="1">Endereço</th>
+                
+                <!--
                 <th rowspan="1" colspan="1">Disciplinas Lecionadas</th>
+                -->
                 <th rowspan="1" colspan="1">Remover</th>
               </tr>
             </thead>
@@ -54,13 +57,18 @@
                 <!--
                 <td>{{professor?.telefone1_professor}}</td>
                 <td>{{professor?.telefone2_professor}}</td>
-                <td>{{professor?.endereco_professor}}</td>
                 -->
+                <td>{{professor?.endereco_professor}}</td>
+                <!--
                 <td>{{professor?.disciplinasLecionadas_professor}}</td>
+                -->
                 <td>
+                    <button type="button" class="btn btn-info" (click)="alterarProfessor(professor?.id)"><i class="fa fa-edit"></i>
+                      Editar</button>
                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" value="{{professor?.id}}"
-                    (click)="id(professor?.id)">
+                    (click)="setIdProfessorDeletar(professor?.id)">
                     <i class="fa fa-trash"></i> Remover</button>
+
 
                 </td>
               </tr>
@@ -92,7 +100,7 @@
   <div class="modal-dialog modal-sm text-center">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Deseja Realmente Excluir o Professor </h4>
+        <h4 class="modal-title">Excluir o Professor ? </h4>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" data-dismiss="modal" id="idDisciplina" (click)="deleteProfessor()"><i

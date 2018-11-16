@@ -2,7 +2,7 @@
   <div class="box-header with-border">
     <h3 class="box-title">Alterar Disicplina</h3>
   </div>
-  <form [formGroup]="alterarDisiciplinaForm">
+  <form [formGroup]="alterarDisiciplinaForm" (ngSubmit)="alterarDisciplina()">
     <div class="box-body">
       <div class="form-group col-md-6">
         <label for="exampleInputEmail1">Nome Disciplina</label>
@@ -30,7 +30,7 @@
     <!-- /.box-body -->
 
     <div class="box-footer">
-      <button type="submit" class="btn btn-success pull-right" [disabled]="alterarDisiciplinaForm.invalid" ><i class="fa fa-edit"></i>
+      <button type="submit" class="btn btn-info pull-right" [disabled]="alterarDisiciplinaForm.invalid" ><i class="fa fa-edit"></i>
         Alterar </button>
     </div>
   </form>

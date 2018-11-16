@@ -14,25 +14,25 @@
     {
       "id": 0,
       "nome_disciplina": "Nome1",
-      "turno_disciplina": "Turnos1",
+      "turno_disciplina": "Manhã",
       "cursos_disciplina": "Cursos1"
     },
     {
       "id": 1,
       "nome_disciplina": "Nome2",
-      "turno_disciplina": "Turnos2",
+      "turno_disciplina": "Noite",
       "cursos_disciplina": "Cursos2"
     },
     {
       "id": 2,
-      "nome_disciplina": "Nome3",
-      "turno_disciplina": "Turnos3",
-      "cursos_disciplina": "Cursos3"
+      "nome_disciplina": "Nome3 1233456",
+      "turno_disciplina": "Noite",
+      "cursos_disciplina": "Cursos3 978 6554 23423 "
     },
     {
       "id": 3,
       "nome_disciplina": "Nome4",
-      "turno_disciplina": "Turnos4",
+      "turno_disciplina": "Noite",
       "cursos_disciplina": "Cursos4"
     },
     {
@@ -86,24 +86,14 @@
   ],
   "professores": [
     {
-      "id": 0,
-      "ra_professor": "P11111",
-      "nome_professor": "Professor1",
-      "email_professor": "email1@email.com",
-      "telefone1_professor": "telefone1",
-      "telefone2_professor": "telefone2",
-      "endereco_professor": "endereco1",
-      "disciplinasLecionadas_professor": "disciplinas1"
-    },
-    {
       "id": 1,
       "ra_professor": "P22222",
-      "nome_professor": "Professor2",
-      "email_professor": "email2@email.com",
-      "telefone1_professor": "telefone1",
-      "telefone2_professor": "telefone2",
-      "endereco_professor": "endereco2",
-      "disciplinasLecionadas_professor": "disciplinas2"
+      "nome_professor": "TESTE ",
+      "email_professor": "dududlç@rmail.com",
+      "telefone1_professor": "3461675",
+      "telefone2_professor": "34616751",
+      "endereco_professor": "",
+      "disciplinasLecionadas_professor": ""
     },
     {
       "id": 2,
@@ -217,16 +207,6 @@
     }
   ],
   "alunos": [
-    {
-      "id": 0,
-      "ra_aluno": "A11111",
-      "nome_aluno": "Alexander Pierce",
-      "email_aluno": "email1@email.com",
-      "telefone1_aluno": "telefones1",
-      "telefone2_aluno": "telefones2",
-      "endereco_aluno": "endereco1",
-      "disciplinasCursadas_aluno": "disciplinas1"
-    },
     {
       "id": 1,
       "ra_aluno": "A22222",

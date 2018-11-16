@@ -27,11 +27,33 @@ export class AlterarDisciplinaComponent implements OnInit {
       this.alterarDisiciplinaForm.controls.nome_disciplina.setValue(this.disciplinaService.disciplina.nome_disciplina);
       this.alterarDisiciplinaForm.controls.turno_disciplina.setValue(this.disciplinaService.disciplina.turno_disciplina);
       this.alterarDisiciplinaForm.controls.cursos_disciplina.setValue(this.disciplinaService.disciplina.cursos_disciplina);
+      console.log(this.disciplinaService.disciplina);
     }
   }
 
   ngOnDestroy() {
     this.disciplinaService.disciplina = null;
+  }
+
+  alterarDisciplina(){
+    let disciplina: Disciplina = {
+      "id": this.disciplinaService.disciplina.id,
+      "nome_disciplina": this.alterarDisiciplinaForm.controls.nome_disciplina.value,
+      "turno_disciplina": this.alterarDisiciplinaForm.controls.turno_disciplina.value,
+      "cursos_disciplina": this.alterarDisiciplinaForm.controls.cursos_disciplina.value
+    }
+    console.log(disciplina);
+
+    this.disciplinaService.alterarDisciplina(disciplina).subscribe( 
+      data =>{
+        console.log(data);
+        alert("Disciplina Alterada Com Sucesso !");
+      },
+      err =>{
+        alert("Erro Ao Alterar ,  Veja o Console para detalhes !");
+        console.log('Erro Gerado: '+JSON.stringify(err));
+      }
+    );
   }
 
 }

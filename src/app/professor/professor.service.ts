@@ -34,4 +34,9 @@ export class ProfessorService {
     deleteProfessor(id:number): Observable<Professor> {
         return this.http.delete<Professor>(`${FACELIST_API}/professores/${id}`);
     }
+
+    alterarProfessor(professor: Professor): Observable<Professor> {
+        return this.http.put<Professor>(`${FACELIST_API}/professores/${professor.id}`,professor);
+    }
+    
 }

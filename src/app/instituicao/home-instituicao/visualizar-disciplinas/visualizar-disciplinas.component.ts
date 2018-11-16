@@ -64,7 +64,6 @@ export class VisualizarDisciplinasComponent implements OnInit {
         break;
       }
     }
-
     this.router.navigate(['/instituicao/alterar-disciplina']);
   }
 }
