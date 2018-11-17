@@ -43,7 +43,7 @@
                 <th rowspan="1" colspan="1">Endereços</th>
                 -->
                 <th rowspan="1" colspan="1">Disciplinas Cursadas</th>
-                <th rowspan="1" colspan="1">Remover</th>
+                <th rowspan="1" colspan="1">Opções</th>
               </tr>
             </thead>
             <tbody>
@@ -58,13 +58,8 @@
                 -->
                 <td>{{aluno?.disciplinasCursadas_aluno}}</td>
                 <td>
-                    <button type="button" class="btn btn-info" (click)="alterarAluno(aluno?.id)"><i class="fa fa-edit"></i>
-                      Editar</button>
-
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" value="{{aluno?.id}}"
-                    (click)="id(aluno?.id)">
-                    <i class="fa fa-trash"></i> Remover</button>
-                    
+                  <button type="button" class="btn btn-info" (click)="alterarAluno(aluno?.id)"><i class="fa fa-edit"></i> Editar</button>
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" value="{{aluno?.id}}" (click)="setIdAlunoDeletar(aluno?.id)"><i class="fa fa-trash"></i> Remover</button>
                 </td>
               </tr>
             </tbody>
@@ -91,19 +86,18 @@
 </div>
 <!-- /.box -->
 
-
 <div id="myModal" class="modal fade" data-backdrop="false" role="dialog">
-    <div class="modal-dialog modal-sm text-center">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog modal-sm text-center vertical-align-center">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Excluir o Aluno ? </h4>
+          <h4 class="modal-title">Deseja realmente excluir?</h4>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success" data-dismiss="modal" (click)="deleteAluno()"><i
-              class="fa fa-trash"></i> SIM</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal"> <i class="fa fa-remove"></i> NÃO</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal" (click)="deletarAluno()"><i class="fa fa-trash"></i> SIM</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-remove"></i> NÃO</button>
         </div>
       </div>
-  
     </div>
   </div>
+</div>

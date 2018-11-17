@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   });
 
   loginErro: boolean;
-  usuarioRegistred: Usuario
+  usuarioRegistred: Usuario;
 
   private get usuario(): string { return this.formGroupLogin.controls.usuario.value; }
   private get senha(): string { return this.formGroupLogin.controls.senha.value; }
@@ -36,19 +36,21 @@ export class LoginComponent implements OnInit {
         if (this.usuarioRegistred == undefined || Object.keys(this.usuarioRegistred).length == 0) {
           this.loginErro = true;
           //console.log("Usuário não existe.");
-
         } else {
-
           if (this.usuarioRegistred[0].senha_usuario !== this.senha) {
             this.loginErro = true;
-            //.log("Senha inválida.");
+            //console.log("Senha inválida.");
 
           } else {
             //console.log("Logado.");
             this.authenticatorService.currentUser = this.usuarioRegistred;
 
-            // VERIFICAR A PRIMEIRA LETRA DO RA PARA DIRECIONAR PARA ÁREA CORRETA
-            this.router.navigate(['/instituicao']);
+            if (this.authenticatorService.currentUser[0].ra_usuario[0] === 'I')
+              this.router.navigate(['/instituicao']);
+            else if (this.authenticatorService.currentUser[0].ra_usuario[0] === 'P')
+              this.router.navigate(['/professor']);
+            else if (this.authenticatorService.currentUser[0].ra_usuario[0] === 'A')
+              this.router.navigate(['/aluno']);
           }
 
         }

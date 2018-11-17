@@ -11,12 +11,11 @@ import { Router } from '@angular/router';
 
 export class VisualizarAlunosComponent implements OnInit {
 
-  
   listAlunos: Aluno[];
   query: string;
 
   idAluno: number;
-  AlunoAlterar: Aluno;
+  alunoAlterar: Aluno;
 
   constructor(private alunoService: AlunoService, private router: Router) { }
 
@@ -25,9 +24,9 @@ export class VisualizarAlunosComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.alunoService.aluno = this.AlunoAlterar;
+    this.alunoService.aluno = this.alunoAlterar;
   }
-  
+
   setIdAlunoDeletar(idAluno: number) {
     this.idAluno = idAluno;
   }
@@ -44,38 +43,31 @@ export class VisualizarAlunosComponent implements OnInit {
     );
   }
 
-
-  deleteAluno(){
-
+  deletarAluno() {
     console.log(this.idAluno);
     this.alunoService.deleteAluno(this.idAluno).subscribe(
-      data =>{
-        console.log(data);
+      data => {
+        //console.log(data);
       },
-      err =>{
-        console.log('Erro Gerado: '+JSON.stringify(err));
-        alert("Erro Ao EXCLUIR ,  Veja o Console para detalhes !");
+      err => {
+        //console.log('Erro Gerado: ' + JSON.stringify(err));
+        //alert("Erro Ao EXCLUIR ,  Veja o Console para detalhes !");
       },
-      ()=> {
+      () => {
         //alert('SUCESSO');
         this.loadAlunos();
       }
     );
-
   }
-
-  private id(id: number) {this.idAluno = id; }
-
 
   alterarAluno(idAluno: number) {
     for (const AlunoaBuscado of this.listAlunos) {
       if (AlunoaBuscado.id == idAluno) {
-        this.AlunoAlterar = AlunoaBuscado;
+        this.alunoAlterar = AlunoaBuscado;
         break;
       }
     }
-    console.log(this.AlunoAlterar);
-    
+    //console.log(this.alunoAlterar);
     this.router.navigate(['/instituicao/alterar-aluno']);
   }
 }

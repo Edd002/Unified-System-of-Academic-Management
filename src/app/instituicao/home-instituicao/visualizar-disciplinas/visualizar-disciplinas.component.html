@@ -46,10 +46,8 @@
                 <td>{{disciplina?.turno_disciplina}}</td>
                 <td>{{disciplina?.cursos_disciplina}}</td>
                 <td>
-                  <button type="button" class="btn btn-info" (click)="alterarDisciplina(disciplina?.id)"><i class="fa fa-edit"></i>
-                    Editar</button>
-                  <button type="button" class="btn btn-danger" (click)="setIdDisciplinaDeletar(disciplina?.id)"
-                    data-toggle="modal" data-target="#myModal"><i class="fa fa-trash"></i> Remover</button>
+                  <button type="button" class="btn btn-info" (click)="alterarDisciplina(disciplina?.id)"><i class="fa fa-edit"></i> Editar</button>
+                  <button type="button" class="btn btn-danger" (click)="setIdDisciplinaDeletar(disciplina?.id)" data-toggle="modal" data-target="#myModal"><i class="fa fa-trash"></i> Remover</button>
                 </td>
               </tr>
             </tbody>
@@ -78,7 +76,7 @@
           <h4 class="modal-title">Deseja realmente excluir?</h4>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success" data-dismiss="modal" id="idDisciplina" (click)="deletarDisciplina()"><i
+          <button type="button" class="btn btn-success" data-dismiss="modal" (click)="deletarDisciplina()"><i
               class="fa fa-trash"></i> SIM</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal"> <i class="fa fa-remove"></i> NÃO</button>
         </div>

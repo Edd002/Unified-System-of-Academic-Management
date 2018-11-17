@@ -45,11 +45,11 @@ export class VisualizarDisciplinasComponent implements OnInit {
   deletarDisciplina() {
     this.disciplinaService.deleteDisciplina(this.idDisciplinaDeletar).subscribe(
       data => {
-        console.log(data);
+        //console.log(data);
       },
       err => {
-        console.log('Erro gerado: ' + JSON.stringify(err));
-        alert("Erro ao EXCLUIR, veja o console para detalhes.");
+        //console.log('Erro gerado: ' + JSON.stringify(err));
+        //alert("Erro ao EXCLUIR, veja o console para detalhes.");
       },
       () => {
         this.loadDisciplinas();

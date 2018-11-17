@@ -5,21 +5,22 @@ div {
 }
 
 .warning {
-    color: red;
-    font-size: 0.8em;
+  color: red;
+  font-size: 0.8em;
 }
-.badge{
-    padding: 1%;    
-    margin: 1%;
-    font-size: 100%;
-}
-  .badge-success{
-    color: #fff;
-    background-color: #28a745;
-   
-  }
-  .badge-info{
-    color: #fff;
-    background-color: #5abcf5;
 
-  }
+.badge{
+  padding: 1%;    
+  margin: 1%;
+  font-size: 100%;
+}
+
+.badge-success{
+  color: #fff;
+  background-color: #28a745;
+}
+
+.badge-info{
+  color: #fff;
+  background-color: #5abcf5;
+}

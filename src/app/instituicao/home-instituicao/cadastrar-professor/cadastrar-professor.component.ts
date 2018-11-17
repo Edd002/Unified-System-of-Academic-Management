@@ -10,10 +10,10 @@ import { ProfessorService } from '../../../professor/professor.service';
 })
 export class CadastrarProfessorComponent implements OnInit {
 
-  CadastroProfessorForm: FormGroup;
+  cadastroProfessorForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private serviceProfessor: ProfessorService) {
-    this.CadastroProfessorForm = this.formBuilder.group({
+    this.cadastroProfessorForm = this.formBuilder.group({
       ra_professor: ['', [Validators.required]],
       nome_professor: ['', Validators.required],
       email_professor: ['', Validators.required],
@@ -30,27 +30,25 @@ export class CadastrarProfessorComponent implements OnInit {
   salvarProfessor() {
     let professor: Professor = {
       "id": null,
-      "ra_professor": this.CadastroProfessorForm.controls.ra_professor.value,
-      "nome_professor": this.CadastroProfessorForm.controls.nome_professor.value,
-      "email_professor": this.CadastroProfessorForm.controls.email_professor.value,
-      "telefone1_professor": this.CadastroProfessorForm.controls.telefonel_professor.value,
-      "telefone2_professor": this.CadastroProfessorForm.controls.telefone2_professor.value,
+      "ra_professor": this.cadastroProfessorForm.controls.ra_professor.value,
+      "nome_professor": this.cadastroProfessorForm.controls.nome_professor.value,
+      "email_professor": this.cadastroProfessorForm.controls.email_professor.value,
+      "telefone1_professor": this.cadastroProfessorForm.controls.telefonel_professor.value,
+      "telefone2_professor": this.cadastroProfessorForm.controls.telefone2_professor.value,
       "endereco_professor": null,
       "disciplinasLecionadas_professor": null
     }
-    console.log(professor);
+    //console.log(professor);
 
     this.serviceProfessor.registraProfessor(professor).subscribe(
       data => {
-        console.log(data);
-        alert("Professor Salvo Com Sucesso !");
+        //console.log(data);
+        //alert("Professor Salvo Com Sucesso !");
       },
       err => {
-        alert("Erro Ao Salvar ,  Veja o Console para detalhes !");
-        console.log('Erro Gerado: ' + JSON.stringify(err));
+        //alert("Erro Ao Salvar ,  Veja o Console para detalhes !");
+        //console.log('Erro Gerado: ' + JSON.stringify(err));
       }
     );
   }
-
-
 }

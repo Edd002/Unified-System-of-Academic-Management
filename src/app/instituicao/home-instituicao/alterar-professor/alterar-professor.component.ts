@@ -10,11 +10,11 @@ import { ProfessorService } from '../../../professor/professor.service';
 })
 export class AlterarProfessorComponent implements OnInit {
 
-   AlterarProfessorForm: FormGroup;
+  alterarProfessorForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private serviceProfessor: ProfessorService) {
-    this. AlterarProfessorForm = this.formBuilder.group({
-      ra_professor: [{value: '', disabled: true}, Validators.required],
+    this.alterarProfessorForm = this.formBuilder.group({
+      ra_professor: [{ value: '', disabled: true }, Validators.required],
       nome_professor: ['', Validators.required],
       email_professor: ['', Validators.required],
       telefonel_professor: ['', Validators.required],
@@ -24,13 +24,12 @@ export class AlterarProfessorComponent implements OnInit {
 
   ngOnInit() {
     if (this.serviceProfessor.professor !== undefined && this.serviceProfessor.professor !== null) {
-      this. AlterarProfessorForm.controls.ra_professor.setValue(this.serviceProfessor.professor.ra_professor);
-      this. AlterarProfessorForm.controls.nome_professor.setValue(this.serviceProfessor.professor.nome_professor);
-      this. AlterarProfessorForm.controls.email_professor.setValue(this.serviceProfessor.professor.email_professor);
-      this. AlterarProfessorForm.controls.telefonel_professor.setValue(this.serviceProfessor.professor.telefone1_professor);
-      this. AlterarProfessorForm.controls.telefone2_professor.setValue(this.serviceProfessor.professor.telefone2_professor);
+      this.alterarProfessorForm.controls.ra_professor.setValue(this.serviceProfessor.professor.ra_professor);
+      this.alterarProfessorForm.controls.nome_professor.setValue(this.serviceProfessor.professor.nome_professor);
+      this.alterarProfessorForm.controls.email_professor.setValue(this.serviceProfessor.professor.email_professor);
+      this.alterarProfessorForm.controls.telefonel_professor.setValue(this.serviceProfessor.professor.telefone1_professor);
+      this.alterarProfessorForm.controls.telefone2_professor.setValue(this.serviceProfessor.professor.telefone2_professor);
       //console.log(this.serviceProfessor.professor);
-      
     }
   }
 
@@ -38,30 +37,29 @@ export class AlterarProfessorComponent implements OnInit {
     this.serviceProfessor.professor = null;
   }
 
-  alterarProfessor(){
+  alterarProfessor() {
     let professor: Professor = {
       "id": this.serviceProfessor.professor.id,
-      "ra_professor":this.serviceProfessor.professor.ra_professor,
-      "nome_professor": this.AlterarProfessorForm.controls.nome_professor.value,
-      "email_professor": this.AlterarProfessorForm.controls.email_professor.value,
-      "telefone1_professor": this.AlterarProfessorForm.controls.telefonel_professor.value,
-      "telefone2_professor": this.AlterarProfessorForm.controls.telefone2_professor.value,
-      "endereco_professor": '',
-      "disciplinasLecionadas_professor": ''
+      "ra_professor": this.serviceProfessor.professor.ra_professor,
+      "nome_professor": this.alterarProfessorForm.controls.nome_professor.value,
+      "email_professor": this.alterarProfessorForm.controls.email_professor.value,
+      "telefone1_professor": this.alterarProfessorForm.controls.telefonel_professor.value,
+      "telefone2_professor": this.alterarProfessorForm.controls.telefone2_professor.value,
+      "endereco_professor": null,
+      "disciplinasLecionadas_professor": null
     }
-    console.log(professor);
+    //console.log(professor);
 
-    this.serviceProfessor.alterarProfessor(professor).subscribe( 
-      data =>{
-        console.log(data);
-        alert("Professor Alterado Com Sucesso !");
+    this.serviceProfessor.alterarProfessor(professor).subscribe(
+      data => {
+        //console.log(data);
+        //alert("Professor Alterado Com Sucesso !");
       },
-      err =>{
-        alert("Erro Ao Alterar ,  Veja o Console para detalhes !");
-        console.log('Erro Gerado: '+JSON.stringify(err));
+      err => {
+        //alert("Erro Ao Alterar ,  Veja o Console para detalhes !");
+        //console.log('Erro Gerado: ' + JSON.stringify(err));
       }
     );
-    
   }
 
 }

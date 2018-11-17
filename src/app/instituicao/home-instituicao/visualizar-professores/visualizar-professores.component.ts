@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./visualizar-professores.component.css']
 })
 export class VisualizarProfessoresComponent implements OnInit {
-  
+
   listProfessores: Professor[];
   query: string;
 
@@ -25,7 +25,7 @@ export class VisualizarProfessoresComponent implements OnInit {
   ngOnDestroy() {
     this.professorService.professor = this.professorAlterar;
   }
-  
+
   setIdProfessorDeletar(idProfessor: number) {
     this.idProfessor = idProfessor;
   }
@@ -42,27 +42,23 @@ export class VisualizarProfessoresComponent implements OnInit {
     );
   }
 
-
-  deleteProfessor(){
-    console.log(this.idProfessor);
+  deletarProfessor() {
+    //console.log(this.idProfessor);
     this.professorService.deleteProfessor(this.idProfessor).subscribe(
-      data =>{
-        console.log(data);
+      data => {
+        //console.log(data);
       },
-      err =>{
-        console.log('Erro Gerado: '+JSON.stringify(err));
-        alert("Erro Ao EXCLUIR ,  Veja o Console para detalhes !");
+      err => {
+        //console.log('Erro Gerado: '+JSON.stringify(err));
+        //alert("Erro Ao EXCLUIR ,  Veja o Console para detalhes !");
       },
-      ()=> {
+      () => {
         //alert('SUCESSO');
         this.loadProfessores();
       }
     );
 
   }
-
-  private id(id: number) { this.idProfessor = id; }
-
 
   alterarProfessor(idProfessor: number) {
     for (const professorBuscado of this.listProfessores) {

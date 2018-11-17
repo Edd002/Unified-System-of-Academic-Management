@@ -10,10 +10,10 @@ import { Aluno } from '../../../aluno/aluno.model';
 })
 export class CadastrarAlunoComponent implements OnInit {
 
-  CadastroAlunoaForm: FormGroup;
+  cadastroAlunoForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private serviceAluno: AlunoService) {
-    this.CadastroAlunoaForm = this.formBuilder.group({
+    this.cadastroAlunoForm = this.formBuilder.group({
       ra_aluno: ['', [Validators.required]],
       nome_aluno: ['', Validators.required],
       email_aluno: ['', Validators.required],
@@ -22,33 +22,32 @@ export class CadastrarAlunoComponent implements OnInit {
       usuario_aluno: ['', Validators.required],
       senha_aluno: ['', Validators.required],
     });
-
-
   }
 
   ngOnInit() {
   }
+
   salvarAluno() {
     let aluno: Aluno = {
       "id": null,
-      "ra_aluno": this.CadastroAlunoaForm.controls.ra_aluno.value,
-      "nome_aluno": this.CadastroAlunoaForm.controls.nome_aluno.value,
-      "email_aluno": this.CadastroAlunoaForm.controls.email_aluno.value,
-      "telefone1_aluno": this.CadastroAlunoaForm.controls.telefonel_aluno.value,
-      "telefone2_aluno": this.CadastroAlunoaForm.controls.telefone2_aluno.value,
+      "ra_aluno": this.cadastroAlunoForm.controls.ra_aluno.value,
+      "nome_aluno": this.cadastroAlunoForm.controls.nome_aluno.value,
+      "email_aluno": this.cadastroAlunoForm.controls.email_aluno.value,
+      "telefone1_aluno": this.cadastroAlunoForm.controls.telefonel_aluno.value,
+      "telefone2_aluno": this.cadastroAlunoForm.controls.telefone2_aluno.value,
       "endereco_aluno": null,
       "disciplinasCursadas_aluno": null
     }
-    console.log(aluno);
+    //console.log(aluno);
 
     this.serviceAluno.registraAluno(aluno).subscribe(
       data => {
-        console.log(data);
-        alert("Professor Salvo Com Sucesso !");
+        //console.log(data);
+        //alert("Professor Salvo Com Sucesso !");
       },
       err => {
-        alert("Erro Ao Salvar ,  Veja o Console para detalhes !");
-        console.log('Erro Gerado: ' + JSON.stringify(err));
+        //alert("Erro Ao Salvar ,  Veja o Console para detalhes !");
+        //console.log('Erro Gerado: ' + JSON.stringify(err));
       }
     );
   }

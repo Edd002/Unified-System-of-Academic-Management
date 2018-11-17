@@ -21,7 +21,7 @@ export class AuthenticatorService {
         return this.currentUser;
     }
 
-    startUser() {
+    public startUser() {
         this.currentUser = {
             id: null,
             ra_usuario: null,
@@ -32,11 +32,11 @@ export class AuthenticatorService {
         }
     }
 
-    registerPOST(usuario: Usuario): Observable<Usuario> {
+    public registerPOST(usuario: Usuario): Observable<Usuario> {
         return this.httpClient.post<Usuario>(`${FACELIST_API}/usuarios`, usuario);
     }
 
-    register(usuario: Usuario) {
+    public register(usuario: Usuario) {
         this.registerPOST(usuario).subscribe(
             data => {
                 this.currentUser = data;
@@ -48,14 +48,14 @@ export class AuthenticatorService {
         );
     }
 
-    isLogged(): boolean {
+    public isLogged(): boolean {
         if (this.currentUser.id == null)
             return false;
         else
             return true;
     }
 
-    logout() {
+    public logout() {
         sessionStorage.removeItem('u');
         this.startUser();
     }
