@@ -87,8 +87,8 @@
   "professores": [
     {
       "id": 1,
-      "ra_professor": "P111111",
-      "nome_professor": "TESTE ",
+      "ra_professor": "P11111",
+      "nome_professor": "Professor1 ",
       "email_professor": "email1@email.com",
       "telefone1_professor": "telefone1",
       "telefone2_professor": "telefone2",
@@ -97,7 +97,7 @@
     },
     {
       "id": 2,
-      "ra_professor": "P222222",
+      "ra_professor": "P22222",
       "nome_professor": "Professor2",
       "email_professor": "email2@email.com",
       "telefone1_professor": "telefone1",

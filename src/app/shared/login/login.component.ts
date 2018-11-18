@@ -43,13 +43,15 @@ export class LoginComponent implements OnInit {
 
           } else {
             //console.log("Logado.");
-            this.authenticatorService.currentUser = this.usuarioRegistred;
 
-            if (this.authenticatorService.currentUser[0].ra_usuario[0] === 'I')
+            this.authenticatorService.currentUser = this.usuarioRegistred[0];
+            //console.log(this.authenticatorService.currentUser);
+
+            if (this.authenticatorService.currentUser.ra_usuario[0] === 'I')
               this.router.navigate(['/instituicao']);
-            else if (this.authenticatorService.currentUser[0].ra_usuario[0] === 'P')
+            else if (this.authenticatorService.currentUser.ra_usuario[0] === 'P')
               this.router.navigate(['/professor']);
-            else if (this.authenticatorService.currentUser[0].ra_usuario[0] === 'A')
+            else if (this.authenticatorService.currentUser.ra_usuario[0] === 'A')
               this.router.navigate(['/aluno']);
           }
 

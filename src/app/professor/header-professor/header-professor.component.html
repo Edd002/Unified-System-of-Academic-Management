@@ -134,7 +134,7 @@
                 <a role="button" class="btn btn-default btn-flat">Perfil Profissional</a>
               </div>
               <div class="pull-right">
-                <a role="button" [routerLink]="['/login']" (click)="authenticatorService.logout()" class="btn btn-primary btn-flat">Sair</a>
+                <a role="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-flat">Sair</a>
               </div>
             </li>
           </ul>
@@ -143,3 +143,19 @@
     </div>
   </nav>
 </header>
+
+<div id="myModal" class="modal fade" data-backdrop="false" role="dialog">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog modal-sm text-center vertical-align-center">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Deseja realmente sair?</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal" [routerLink]="['/login']" (click)="authenticatorService.logout()">Sair</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

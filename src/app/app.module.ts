@@ -47,6 +47,8 @@ import { ProfessorService } from './professor/professor.service';
 import { AlunoService } from './aluno/aluno.service';
 import { SituacaoService } from './situacao/situacao.service';
 import { AuthenticatorService } from './usuario/authenticator.service';
+import { OnlyLoggedInUsersGuard } from './usuario/OnlyLoggedInUsersGuard';
+import { AlwaysAuthGuard } from './usuario/AlwaysAuthGuard';
 
 @NgModule({
   declarations: [
@@ -99,7 +101,9 @@ import { AuthenticatorService } from './usuario/authenticator.service';
     ProfessorService,
     AlunoService,
     SituacaoService,
-    AuthenticatorService
+    AuthenticatorService,
+    OnlyLoggedInUsersGuard,
+    AlwaysAuthGuard
   ],
   bootstrap: [AppComponent]
 })

@@ -44,17 +44,17 @@ export class VisualizarAlunosComponent implements OnInit {
   }
 
   deletarAluno() {
-    console.log(this.idAluno);
+    //console.log(this.idAluno);
     this.alunoService.deleteAluno(this.idAluno).subscribe(
       data => {
         //console.log(data);
       },
       err => {
-        //console.log('Erro Gerado: ' + JSON.stringify(err));
-        //alert("Erro Ao EXCLUIR ,  Veja o Console para detalhes !");
+        //console.log('Erro gerado: ' + JSON.stringify(err));
+        //console.log("Erro ao excluir, veja o console para detalhes.");
       },
       () => {
-        //alert('SUCESSO');
+        //console.log('Sucesso');
         this.loadAlunos();
       }
     );

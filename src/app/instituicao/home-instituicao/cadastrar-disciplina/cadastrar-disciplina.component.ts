@@ -32,12 +32,12 @@ export class CadastrarDisciplinaComponent implements OnInit {
     }
     this.serviceDisciplina.registraDisciplina(disciplina).subscribe(
       data =>{
-        console.log(data);
-        alert("Disciplina Salva Com Sucesso !");
+        //console.log(data);
+        //console.log("Disciplina cadastrada com sucesso.");
       },
       err =>{
-        alert("Erro Ao Salvar ,  Veja o Console para detalhes !");
-        console.log('Erro Gerado: '+JSON.stringify(err));
+        //console.log("Erro ao cadastrar, veja o console para detalhes.");
+        //console.log('Erro Gerado: ' + JSON.stringify(err));
       }
     );
   }

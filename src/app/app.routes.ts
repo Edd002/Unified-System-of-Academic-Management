@@ -24,6 +24,8 @@ import { AlunoComponent } from './aluno/aluno.component';
 import { QuadroAvisosComponent as QuadroAvisosComponentAluno } from './aluno/home-aluno/quadro-avisos/quadro-avisos.component';
 import { DisciplinasMatriculadasComponent } from './aluno/home-aluno/disciplinas-matriculadas/disciplinas-matriculadas.component';
 import { CronogramaAcademicoComponent as CronogramaAcademicoComponentAluno } from './aluno/home-aluno/cronograma-academico/cronograma-academico.component';
+import { OnlyLoggedInUsersGuard } from './usuario/OnlyLoggedInUsersGuard';
+import { AlwaysAuthGuard } from './usuario/AlwaysAuthGuard';
 
 export const ROUTES: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -31,6 +33,7 @@ export const ROUTES: Routes = [
     { path: 'register', component: RegisterComponent },
     {
         path: 'instituicao', component: InstituicaoComponent,
+        canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],
         children: [
             { path: 'cadastrar-disciplina', component: CadastrarDisciplinaComponent },
             { path: 'cadastrar-professor', component: CadastrarProfessorComponent },
@@ -45,6 +48,7 @@ export const ROUTES: Routes = [
     },
     {
         path: 'professor', component: ProfessorComponent,
+        //canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],
         children: [
             { path: 'quadro-avisos', component: QuadroAvisosComponentProfessor },
             { path: 'gerenciamento-faltas', component: GerenciamentoFaltasComponent },
@@ -54,6 +58,7 @@ export const ROUTES: Routes = [
     },
     {
         path: 'aluno', component: AlunoComponent,
+        canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],
         children: [
             { path: 'quadro-avisos', component: QuadroAvisosComponentAluno },
             { path: 'disciplinas-matriculadas', component: DisciplinasMatriculadasComponent },

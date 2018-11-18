@@ -81,7 +81,7 @@ export class RegisterComponent implements OnInit {
                   err => { },
                   () => {
                     if (aluno == undefined || Object.keys(aluno).length == 0) {
-                      console.log("Não existe o aluno e não existe o professor.");
+                      //console.log("Não existe o aluno e não existe o professor.");
                       this.formGroupRegister.controls.usuario.markAsUntouched();
                       this.formGroupRegister.controls.senha.markAsUntouched();
                       this.formGroupRegister.controls.confirmarSenha.markAsUntouched();
@@ -90,12 +90,12 @@ export class RegisterComponent implements OnInit {
                       this.email = null;
                       this.formGroupRegisterReadOnly = true;
                     } else {
-                      console.log("Existe o aluno.");
+                      //console.log("Existe o aluno.");
                       this.formGroupRegister.controls.usuario.markAsTouched();
                       this.formGroupRegister.controls.senha.markAsTouched();
                       this.formGroupRegister.controls.confirmarSenha.markAsTouched();
 
-                      console.log(aluno[0]);
+                      //console.log(aluno[0]);
                       this.nome = aluno[0].nome_aluno;
                       this.email = aluno[0].email_aluno;
                       this.formGroupRegisterReadOnly = false;
@@ -103,7 +103,7 @@ export class RegisterComponent implements OnInit {
                   }
                 );
               } else {
-                console.log("Existe o professor.");
+                //console.log("Existe o professor.");
                 this.formGroupRegister.controls.usuario.markAsTouched();
                 this.formGroupRegister.controls.senha.markAsTouched();
                 this.formGroupRegister.controls.confirmarSenha.markAsTouched();
@@ -115,8 +115,8 @@ export class RegisterComponent implements OnInit {
             }
           );
         } else {
+          //console.log('Usuário já registrado.');
           this.raRegistred = true;
-          console.log('Usuário já registrado.');
         }
       }
     )
@@ -133,12 +133,12 @@ export class RegisterComponent implements OnInit {
     }
 
     this.authenticatorService.register(usuarioRegister);
-    this.sucessRegistration();
+    //this.sucessRegistration();
   }
 
   sucessRegistration() {
     this.formGroupRegister.reset();
-    alert("Usuário registrado.");
+    //console.log("Usuário registrado.");
     this.router.navigate(['/login']);
   }
 }

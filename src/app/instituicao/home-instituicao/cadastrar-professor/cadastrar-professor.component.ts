@@ -43,11 +43,11 @@ export class CadastrarProfessorComponent implements OnInit {
     this.serviceProfessor.registraProfessor(professor).subscribe(
       data => {
         //console.log(data);
-        //alert("Professor Salvo Com Sucesso !");
+        //console.log("Professor cadastrado com sucesso.");
       },
       err => {
-        //alert("Erro Ao Salvar ,  Veja o Console para detalhes !");
-        //console.log('Erro Gerado: ' + JSON.stringify(err));
+        //console.log("Erro ao salvar, veja o console para detalhes.");
+        //console.log('Erro gerado: ' + JSON.stringify(err));
       }
     );
   }

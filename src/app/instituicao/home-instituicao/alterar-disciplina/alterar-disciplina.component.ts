@@ -45,11 +45,11 @@ export class AlterarDisciplinaComponent implements OnInit {
     this.disciplinaService.alterarDisciplina(disciplina).subscribe(
       data => {
         //console.log(data);
-        //alert("Disciplina Alterada Com Sucesso !");
+        //console.log("Disciplina alterada com sucesso");
       },
       err => {
-        //alert("Erro Ao Alterar ,  Veja o Console para detalhes !");
-        //console.log('Erro Gerado: ' + JSON.stringify(err));
+        //console.log("Erro ao alterar, veja o Console para detalhes.");
+        //console.log('Erro gerado: ' + JSON.stringify(err));
       }
     );
   }

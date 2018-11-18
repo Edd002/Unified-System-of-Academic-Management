@@ -43,7 +43,7 @@ export class AuthenticatorService {
                 this.currentUser.senha_usuario = null;
                 sessionStorage.setItem('u', JSON.stringify(this.currentUser));
 
-                alert('Usuário registrado.');
+                //console.log('Usuário registrado.');
             }
         );
     }
@@ -59,7 +59,6 @@ export class AuthenticatorService {
         sessionStorage.removeItem('u');
         this.startUser();
     }
-
 
     getUsuarioByRA(ra: string): Observable<Usuario> {
         return this.httpClient.get<Usuario>(`${FACELIST_API}/usuarios?ra_usuario=${ra}`);

@@ -53,11 +53,11 @@ export class AlterarProfessorComponent implements OnInit {
     this.serviceProfessor.alterarProfessor(professor).subscribe(
       data => {
         //console.log(data);
-        //alert("Professor Alterado Com Sucesso !");
+        //console.log("Professor alterado com sucesso.");
       },
       err => {
-        //alert("Erro Ao Alterar ,  Veja o Console para detalhes !");
-        //console.log('Erro Gerado: ' + JSON.stringify(err));
+        //console.log("Erro ao alterar, veja o console para detalhes.");
+        //console.log('Erro gerado: ' + JSON.stringify(err));
       }
     );
   }

@@ -49,7 +49,7 @@ export class VisualizarDisciplinasComponent implements OnInit {
       },
       err => {
         //console.log('Erro gerado: ' + JSON.stringify(err));
-        //alert("Erro ao EXCLUIR, veja o console para detalhes.");
+        //console.log("Erro ao excluir, veja o console para detalhes.");
       },
       () => {
         this.loadDisciplinas();
