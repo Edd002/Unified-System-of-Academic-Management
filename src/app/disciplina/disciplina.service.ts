@@ -23,6 +23,10 @@ export class DisciplinaService {
         return this.http.get<Disciplina>(`${FACELIST_API}/disciplinas/${id}`);
     }
 
+    getDisciplinaByNome(nomeDisciplina: string): Observable<Disciplina> {
+        return this.http.get<Disciplina>(`${FACELIST_API}/disciplinas?nome_disciplina=${nomeDisciplina}`);
+    }
+
     registraDisciplina(disciplina: Disciplina): Observable<Disciplina> {
         return this.http.post<Disciplina>(`${FACELIST_API}/disciplinas`, disciplina);
     }

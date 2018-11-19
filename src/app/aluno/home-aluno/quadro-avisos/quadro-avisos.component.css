@@ -3,3 +3,7 @@ div {
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
 }
+
+#external-events div {
+    cursor: default !important;
+}

@@ -13,73 +13,73 @@
   "disciplinas": [
     {
       "id": 0,
-      "nome_disciplina": "Nome1",
-      "turno_disciplina": "Manhã",
+      "nome_disciplina": "Nome_Disciplina1",
+      "turno_disciplina": "Turno1",
       "cursos_disciplina": "Cursos1"
     },
     {
       "id": 1,
-      "nome_disciplina": "Nome2",
-      "turno_disciplina": "Noite",
+      "nome_disciplina": "Nome_Disciplina2",
+      "turno_disciplina": "Turno2",
       "cursos_disciplina": "Cursos2"
     },
     {
       "id": 2,
-      "nome_disciplina": "Nome3 1233456",
-      "turno_disciplina": "Noite",
-      "cursos_disciplina": "Cursos3 978 6554 23423 "
+      "nome_disciplina": "Nome_Disciplina3",
+      "turno_disciplina": "Turno3",
+      "cursos_disciplina": "Cursos3"
     },
     {
       "id": 3,
-      "nome_disciplina": "Nome4",
-      "turno_disciplina": "Noite",
+      "nome_disciplina": "Nome_Disciplina4",
+      "turno_disciplina": "Turno4",
       "cursos_disciplina": "Cursos4"
     },
     {
       "id": 4,
-      "nome_disciplina": "Nome5",
+      "nome_disciplina": "Nome_Disciplina5",
       "turno_disciplina": "Turnos5",
       "cursos_disciplina": "Cursos5"
     },
     {
       "id": 5,
-      "nome_disciplina": "Nome6",
+      "nome_disciplina": "Nome_Disciplina6",
       "turno_disciplina": "Turnos6",
       "cursos_disciplina": "Cursos6"
     },
     {
       "id": 6,
-      "nome_disciplina": "Nome7",
+      "nome_disciplina": "Nome_Disciplina7",
       "turno_disciplina": "Turnos7",
       "cursos_disciplina": "Cursos7"
     },
     {
       "id": 7,
-      "nome_disciplina": "Nome8",
+      "nome_disciplina": "Nome_Disciplina8",
       "turno_disciplina": "Turnos8",
       "cursos_disciplina": "Cursos8"
     },
     {
       "id": 8,
-      "nome_disciplina": "Nome9",
+      "nome_disciplina": "Nome_Disciplina9",
       "turno_disciplina": "Turnos9",
       "cursos_disciplina": "Cursos9"
     },
     {
       "id": 9,
-      "nome_disciplina": "Nome10",
+      "nome_disciplina": "Nome_Disciplina10",
       "turno_disciplina": "Turnos10",
       "cursos_disciplina": "Cursos10"
     },
     {
       "id": 10,
-      "nome_disciplina": "Nome11",
+      "nome_disciplina": "Nome_Disciplina11",
       "turno_disciplina": "Turnos11",
       "cursos_disciplina": "Cursos11"
     },
     {
       "id": 11,
-      "nome_disciplina": "Nome12",
+      "nome_disciplina": "Nome_Disciplina12",
       "turno_disciplina": "Turnos12",
       "cursos_disciplina": "Cursos12"
     }
@@ -341,129 +341,129 @@
   "situacoes": [
     {
       "id": 0,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": 0,
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A11111",
+      "nomeDisciplina_situacao": "Nome_Disciplina1",
+      "nota1_situacao": 11,
+      "nota2_situacao": 11,
+      "nota3_situacao": 11,
+      "faltas_situacao": 1
     },
     {
       "id": 1,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": 1,
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A22222",
+      "nomeDisciplina_situacao": "Nome_Disciplina2",
+      "nota1_situacao": 22,
+      "nota2_situacao": 22,
+      "nota3_situacao": 22,
+      "faltas_situacao": 2
     },
     {
       "id": 2,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": 2,
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A33333",
+      "nomeDisciplina_situacao": "Nome_Disciplina3",
+      "nota1_situacao": 33,
+      "nota2_situacao": 33,
+      "nota3_situacao": 33,
+      "faltas_situacao": 3
     },
     {
       "id": 3,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": "Nome_Disciplina",
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A44444",
+      "nomeDisciplina_situacao": "Nome_Disciplina4",
+      "nota1_situacao": 44,
+      "nota2_situacao": 44,
+      "nota3_situacao": 44,
+      "faltas_situacao": 4
     },
     {
       "id": 4,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": "Nome_Disciplina",
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A55555",
+      "nomeDisciplina_situacao": "Nome_Disciplina5",
+      "nota1_situacao": 55,
+      "nota2_situacao": 55,
+      "nota3_situacao": 55,
+      "faltas_situacao": 5
     },
     {
       "id": 5,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": "Nome_Disciplina",
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A66666",
+      "nomeDisciplina_situacao": "Nome_Disciplina6",
+      "nota1_situacao": 66,
+      "nota2_situacao": 66,
+      "nota3_situacao": 66,
+      "faltas_situacao": 6
     },
     {
       "id": 6,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": "Nome_Disciplina",
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A77777",
+      "nomeDisciplina_situacao": "Nome_Disciplina7",
+      "nota1_situacao": 77,
+      "nota2_situacao": 77,
+      "nota3_situacao": 77,
+      "faltas_situacao": 7
     },
     {
       "id": 7,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": "Nome_Disciplina",
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A88888",
+      "nomeDisciplina_situacao": "Nome_Disciplina8",
+      "nota1_situacao": 88,
+      "nota2_situacao": 88,
+      "nota3_situacao": 88,
+      "faltas_situacao": 8
     },
     {
       "id": 8,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": "Nome_Disciplina",
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A99999",
+      "nomeDisciplina_situacao": "Nome_Disciplina9",
+      "nota1_situacao": 99,
+      "nota2_situacao": 99,
+      "nota3_situacao": 99,
+      "faltas_situacao": 9
     },
     {
       "id": 9,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": "Nome_Disciplina",
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A1010101010",
+      "nomeDisciplina_situacao": "Nome_Disciplina10",
+      "nota1_situacao": 100,
+      "nota2_situacao": 100,
+      "nota3_situacao": 100,
+      "faltas_situacao": 10
     },
     {
       "id": 10,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": "Nome_Disciplina",
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A1111111111",
+      "nomeDisciplina_situacao": "Nome_Disciplina11",
+      "nota1_situacao": 100,
+      "nota2_situacao": 100,
+      "nota3_situacao": 100,
+      "faltas_situacao": 11
     },
     {
       "id": 11,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": "Nome_Disciplina",
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A1212121212",
+      "nomeDisciplina_situacao": "Nome_Disciplina12",
+      "nota1_situacao": 100,
+      "nota2_situacao": 100,
+      "nota3_situacao": 100,
+      "faltas_situacao": 12
     },
     {
       "id": 12,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": "Nome_Disciplina",
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A321321321",
+      "nomeDisciplina_situacao": "Nome_Disciplina13",
+      "nota1_situacao": 100,
+      "nota2_situacao": 100,
+      "nota3_situacao": 100,
+      "faltas_situacao": 13
     },
     {
       "id": 13,
-      "raAluno_situacao": "RA_Aluno",
-      "nomeDisciplina_situacao": "Nome_Disciplina",
-      "nota1_situacao": "nota1",
-      "nota2_situacao": "nota2",
-      "nota3_situacao": "nota3",
-      "faltas_situacao": "faltas"
+      "raAluno_situacao": "A00000",
+      "nomeDisciplina_situacao": "Nome_Disciplina0",
+      "nota1_situacao": 0,
+      "nota2_situacao": 0,
+      "nota3_situacao": 0,
+      "faltas_situacao": 0
     }
   ],
   "usuarios": [

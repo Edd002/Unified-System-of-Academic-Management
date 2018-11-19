@@ -48,7 +48,7 @@ export const ROUTES: Routes = [
     },
     {
         path: 'professor', component: ProfessorComponent,
-        //canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],
+        canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],
         children: [
             { path: 'quadro-avisos', component: QuadroAvisosComponentProfessor },
             { path: 'gerenciamento-faltas', component: GerenciamentoFaltasComponent },
@@ -65,6 +65,5 @@ export const ROUTES: Routes = [
             { path: 'cronograma-academico', component: CronogramaAcademicoComponentAluno }
         ]
     },
-
     { path: '**', redirectTo: 'login' }
 ]

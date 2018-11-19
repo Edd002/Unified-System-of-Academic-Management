@@ -28,21 +28,17 @@
               "src/assets/bower_components/font-awesome/css/font-awesome.min.css",
               "src/assets/bower_components/Ionicons/css/ionicons.min.css",
               "src/assets/css/AdminLTE.min.css",
-              "src/assets/css/skins/_all-skins.min.css",
-              "src/assets/bower_components/fullcalendar/dist/fullcalendar.min.css",
-              "src/assets/bower_components/fullcalendar/dist/fullcalendar.print.min.css"
+              "src/assets/css/skins/_all-skins.min.css"
             ],
             "scripts": [
-              "src/assets/js/analytics.js",
               "src/assets/bower_components/jquery/dist/jquery.min.js",
+              "src/assets/bower_components/jquery/dist/jquery-migrate-3.0.0.min.js",
               "src/assets/bower_components/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/bower_components/jquery-ui/jquery-ui.min.js",
               "src/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js",
               "src/assets/bower_components/fastclick/lib/fastclick.js",
               "src/assets/js/adminlte.min.js",
-              "src/assets/js/demo.js",
-              "src/assets/bower_components/moment/moment.js",
-              "src/assets/bower_components/fullcalendar/dist/fullcalendar.min.js"
+              "src/assets/js/demo.js"
             ]
           },
           "configurations": {

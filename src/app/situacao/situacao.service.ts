@@ -19,6 +19,10 @@ export class SituacaoService {
         return this.http.get<Situacao[]>(`${FACELIST_API}/situacoes?nome_situacao_like=${query}`);
     }
 
+    getSituacoesByRa(raAluno: string): Observable<Situacao> {
+        return this.http.get<Situacao>(`${FACELIST_API}/situacoes?raAluno_situacao=${raAluno}`);
+    }
+
     getSituacoesById(id: number): Observable<Situacao> {
         return this.http.get<Situacao>(`${FACELIST_API}/situacoes/${id}`);
     }
