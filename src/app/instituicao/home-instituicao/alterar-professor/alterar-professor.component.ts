@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Professor } from '../../../professor/professor.model'
 import { ProfessorService } from '../../../professor/professor.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'usam-alterar-professor',
@@ -11,8 +12,9 @@ import { ProfessorService } from '../../../professor/professor.service';
 export class AlterarProfessorComponent implements OnInit {
 
   alterarProfessorForm: FormGroup;
+  mostrarMensagem: boolean = false
 
-  constructor(private formBuilder: FormBuilder, private serviceProfessor: ProfessorService) {
+  constructor(private router: Router,private formBuilder: FormBuilder, private serviceProfessor: ProfessorService) {
     this.alterarProfessorForm = this.formBuilder.group({
       ra_professor: [{ value: '', disabled: true }, Validators.required],
       nome_professor: ['', Validators.required],
@@ -30,6 +32,8 @@ export class AlterarProfessorComponent implements OnInit {
       this.alterarProfessorForm.controls.telefonel_professor.setValue(this.serviceProfessor.professor.telefone1_professor);
       this.alterarProfessorForm.controls.telefone2_professor.setValue(this.serviceProfessor.professor.telefone2_professor);
       //console.log(this.serviceProfessor.professor);
+    }else {
+      this.router.navigate(['/instituicao/visualizar-professores']);
     }
   }
 
@@ -45,8 +49,8 @@ export class AlterarProfessorComponent implements OnInit {
       "email_professor": this.alterarProfessorForm.controls.email_professor.value,
       "telefone1_professor": this.alterarProfessorForm.controls.telefonel_professor.value,
       "telefone2_professor": this.alterarProfessorForm.controls.telefone2_professor.value,
-      "endereco_professor": null,
-      "disciplinasLecionadas_professor": null
+      "endereco_professor": this.serviceProfessor.professor.endereco_professor,
+      "disciplinasLecionadas_professor": this.serviceProfessor.professor.disciplinasLecionadas_professor
     }
     //console.log(professor);
 
@@ -54,6 +58,7 @@ export class AlterarProfessorComponent implements OnInit {
       data => {
         //console.log(data);
         //console.log("Professor alterado com sucesso.");
+        this.mostrarMensagem = true 
       },
       err => {
         //console.log("Erro ao alterar, veja o console para detalhes.");

@@ -35,4 +35,8 @@ export class AlunoService {
         return this.http.delete<Aluno>(`${FACELIST_API}/alunos/${id}`);
     }
 
+    alterarAluno(aluno: Aluno): Observable<Aluno> {
+        return this.http.put<Aluno>(`${FACELIST_API}/alunos/${aluno.id}`,aluno);
+    }
+
 }

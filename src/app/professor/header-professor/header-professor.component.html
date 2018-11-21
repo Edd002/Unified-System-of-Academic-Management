@@ -134,7 +134,7 @@
                 <a role="button" class="btn btn-default btn-flat">Perfil Profissional</a>
               </div>
               <div class="pull-right">
-                <a role="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-flat">Sair</a>
+                <a role="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-flat"><i class="fa fa-sign-out"></i>Sair</a>
               </div>
             </li>
           </ul>
@@ -152,8 +152,8 @@
           <h4 class="modal-title">Deseja realmente sair?</h4>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success" data-dismiss="modal" [routerLink]="['/login']" (click)="authenticatorService.logout()">Sair</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal" [routerLink]="['/login']" (click)="authenticatorService.logout()"><i class="fa fa-sign-out"></i> Sair</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"></i> Cancelar</button>
         </div>
       </div>
     </div>

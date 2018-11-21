@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Disciplina } from '../../../disciplina/disciplina.model'
 import { DisciplinaService } from '../../../disciplina/disciplina.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'usam-alterar-disciplina',
@@ -11,8 +12,9 @@ import { DisciplinaService } from '../../../disciplina/disciplina.service';
 export class AlterarDisciplinaComponent implements OnInit {
 
   alterarDisiciplinaForm: FormGroup;
+  mostrarMensagem: boolean = false
 
-  constructor(private formBuilder: FormBuilder, private disciplinaService: DisciplinaService) {
+  constructor(private router: Router, private formBuilder: FormBuilder, private disciplinaService: DisciplinaService) {
     this.alterarDisiciplinaForm = this.formBuilder.group({
       nome_disciplina: ['', [Validators.required]],
       turno_disciplina: ['', [Validators.required]],
@@ -26,6 +28,8 @@ export class AlterarDisciplinaComponent implements OnInit {
       this.alterarDisiciplinaForm.controls.turno_disciplina.setValue(this.disciplinaService.disciplina.turno_disciplina);
       this.alterarDisiciplinaForm.controls.cursos_disciplina.setValue(this.disciplinaService.disciplina.cursos_disciplina);
       //console.log(this.disciplinaService.disciplina);
+    }else {
+      this.router.navigate(['/instituicao/visualizar-disciplinas']);
     }
   }
 
@@ -46,6 +50,7 @@ export class AlterarDisciplinaComponent implements OnInit {
       data => {
         //console.log(data);
         //console.log("Disciplina alterada com sucesso");
+        this.mostrarMensagem = true
       },
       err => {
         //console.log("Erro ao alterar, veja o Console para detalhes.");
