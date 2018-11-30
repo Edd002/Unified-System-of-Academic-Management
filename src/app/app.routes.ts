@@ -33,7 +33,7 @@ export const ROUTES: Routes = [
     { path: 'register', component: RegisterComponent },
     {
         path: 'instituicao', component: InstituicaoComponent,
-        //canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],
+        canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],
         children: [
             { path: 'cadastrar-disciplina', component: CadastrarDisciplinaComponent },
             { path: 'cadastrar-professor', component: CadastrarProfessorComponent },
@@ -48,7 +48,7 @@ export const ROUTES: Routes = [
     },
     {
         path: 'professor', component: ProfessorComponent,
-        //canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],
+        canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],
         children: [
             { path: 'quadro-avisos', component: QuadroAvisosComponentProfessor },
             { path: 'gerenciamento-faltas', component: GerenciamentoFaltasComponent },
@@ -58,7 +58,7 @@ export const ROUTES: Routes = [
     },
     {
         path: 'aluno', component: AlunoComponent,
-        //canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],
+        canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard],
         children: [
             { path: 'quadro-avisos', component: QuadroAvisosComponentAluno },
             { path: 'disciplinas-matriculadas', component: DisciplinasMatriculadasComponent },

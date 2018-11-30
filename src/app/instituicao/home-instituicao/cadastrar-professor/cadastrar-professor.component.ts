@@ -11,6 +11,7 @@ import { ProfessorService } from '../../../professor/professor.service';
 export class CadastrarProfessorComponent implements OnInit {
 
   cadastroProfessorForm: FormGroup;
+  mostrarMensagem: boolean = false
 
   constructor(private formBuilder: FormBuilder, private serviceProfessor: ProfessorService) {
     this.cadastroProfessorForm = this.formBuilder.group({
@@ -18,9 +19,7 @@ export class CadastrarProfessorComponent implements OnInit {
       nome_professor: ['', Validators.required],
       email_professor: ['', Validators.required],
       telefonel_professor: ['', Validators.required],
-      telefone2_professor: ['', Validators.required],
-      usuario_professor: ['', Validators.required],
-      senha_professor: ['', Validators.required],
+      telefone2_professor: ['', Validators.required]
     });
   }
 
@@ -44,6 +43,8 @@ export class CadastrarProfessorComponent implements OnInit {
       data => {
         //console.log(data);
         //console.log("Professor cadastrado com sucesso.");
+        this.mostrarMensagem = true
+        this.cadastroProfessorForm.reset();
       },
       err => {
         //console.log("Erro ao salvar, veja o console para detalhes.");

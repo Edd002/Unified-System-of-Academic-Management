@@ -11,6 +11,7 @@ import {DisciplinaService} from '../../../disciplina/disciplina.service';
 export class CadastrarDisciplinaComponent implements OnInit {
 
   CadastroDisiciplinaForm: FormGroup;
+  mostrarMensagem: boolean = false
 
   constructor(private formBuilder: FormBuilder,private serviceDisciplina:DisciplinaService) {
     this.CadastroDisiciplinaForm = this.formBuilder.group({
@@ -34,6 +35,8 @@ export class CadastrarDisciplinaComponent implements OnInit {
       data =>{
         //console.log(data);
         //console.log("Disciplina cadastrada com sucesso.");
+        this.mostrarMensagem = true
+        this.CadastroDisiciplinaForm.reset();
       },
       err =>{
         //console.log("Erro ao cadastrar, veja o console para detalhes.");

@@ -12,34 +12,16 @@
   ],
   "disciplinas": [
     {
-      "id": 0,
-      "nome_disciplina": "Nome_Disciplina1",
-      "turno_disciplina": "Turno1",
-      "cursos_disciplina": "Cursos1"
-    },
-    {
       "id": 1,
       "nome_disciplina": "Nome_Disciplina2",
-      "turno_disciplina": "Turno2",
+      "turno_disciplina": "Manhã",
       "cursos_disciplina": "Cursos2"
-    },
-    {
-      "id": 2,
-      "nome_disciplina": "Nome_Disciplina3",
-      "turno_disciplina": "Turno3",
-      "cursos_disciplina": "Cursos3"
     },
     {
       "id": 3,
       "nome_disciplina": "Nome_Disciplina4",
       "turno_disciplina": "Turno4",
       "cursos_disciplina": "Cursos4"
-    },
-    {
-      "id": 4,
-      "nome_disciplina": "Nome_Disciplina5",
-      "turno_disciplina": "Turnos5",
-      "cursos_disciplina": "Cursos5"
     },
     {
       "id": 5,
@@ -82,6 +64,18 @@
       "nome_disciplina": "Nome_Disciplina12",
       "turno_disciplina": "Turnos12",
       "cursos_disciplina": "Cursos12"
+    },
+    {
+      "id": 12,
+      "nome_disciplina": "Nome Disciplina Teste",
+      "turno_disciplina": "Manhã",
+      "cursos_disciplina": "Teste 2 "
+    },
+    {
+      "id": 13,
+      "nome_disciplina": "Nome_Disciplina1",
+      "turno_disciplina": "Noite",
+      "cursos_disciplina": "Teste 2 "
     }
   ],
   "professores": [
@@ -214,6 +208,26 @@
       "telefone2_professor": "telefone2",
       "endereco_professor": "endereco13",
       "disciplinasLecionadas_professor": "disciplinas13"
+    },
+    {
+      "id": 14,
+      "ra_professor": "P3214",
+      "nome_professor": "Nome",
+      "email_professor": "prof@mail.com",
+      "telefone1_professor": "34616751",
+      "telefone2_professor": "34163751",
+      "endereco_professor": null,
+      "disciplinasLecionadas_professor": null
+    },
+    {
+      "id": 15,
+      "ra_professor": "P32145",
+      "nome_professor": "Prof NOme",
+      "email_professor": "prof@mail.com",
+      "telefone1_professor": "34616751",
+      "telefone2_professor": "3146647",
+      "endereco_professor": null,
+      "disciplinasLecionadas_professor": null
     }
   ],
   "alunos": [
@@ -336,6 +350,16 @@
       "telefone2_aluno": "telefones2",
       "endereco_aluno": "endereco13",
       "disciplinasCursadas_aluno": "disciplinas13"
+    },
+    {
+      "id": 13,
+      "ra_aluno": "A98765",
+      "nome_aluno": "Nome Aluno",
+      "email_aluno": "aluno@mail.com",
+      "telefone1_aluno": "34616761",
+      "telefone2_aluno": "34616487",
+      "endereco_aluno": null,
+      "disciplinasCursadas_aluno": null
     }
   ],
   "situacoes": [
@@ -666,6 +690,22 @@
       "email_usuario": "email12@email.com",
       "usuario_usuario": "aluno12",
       "senha_usuario": "aluno12"
+    },
+    {
+      "id": 25,
+      "ra_usuario": "A98765",
+      "nome_usuario": "Nome Aluno",
+      "email_usuario": "aluno@mail.com",
+      "usuario_usuario": "teste1",
+      "senha_usuario": "123456789"
+    },
+    {
+      "id": 26,
+      "ra_usuario": "P123123123",
+      "nome_usuario": "notRegistredUser123",
+      "email_usuario": "notRegistredUser123@email.com",
+      "usuario_usuario": "Usuario",
+      "senha_usuario": "sENHA123"
     }
   ]
 }
